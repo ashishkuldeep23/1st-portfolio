@@ -1,4 +1,22 @@
 
+// // // Follow mause (skew is not completed)---->
+window.addEventListener( "mousemove" , (values)=>{
+
+    // console.log(values)
+
+    let x = values.clientX
+    let y = values.clientY
+
+
+    document.getElementById("tracker").style.transform = `translate(${x}px , ${y-95}px)`
+
+} )
+
+
+
+
+
+
 
 
 let menuBtnClicked = false
