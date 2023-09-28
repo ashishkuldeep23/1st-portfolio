@@ -1,16 +1,32 @@
 
 // // // Follow mause (skew is not completed)---->
-window.addEventListener( "mousemove" , (values)=>{
+// // Two way to do this -->
+// // 1st is without gsap
 
+window.addEventListener("mousemove", (values) => {
+    
     // console.log(values)
-
     let x = values.clientX
     let y = values.clientY
-
-
     document.getElementById("tracker").style.transform = `translate(${x}px , ${y-95}px)`
+    
+})
 
-} )
+
+
+// // 1st is with gsap
+function cursorAnimation() {
+    document.addEventListener("mousemove", function (dets) {
+        gsap.to("#tracker", {
+            left: dets.x,
+            top: dets.y,
+        });
+    });
+
+}
+
+
+// cursorAnimation()
 
 
 
@@ -36,34 +52,33 @@ function showMenuBtn() {
 
 
 
-
 // // // // Read mouse over on about section and change color of image background --->
 
-function getRandomColor(){
+function getRandomColor() {
 
     let colorArr = [
         // "#30323D" ,
         // "darkblue" ,
-        "#DB7F8E" ,
-        "#E8C547" ,
-        "#001514" ,
-        "#F15BB5" ,
-        "#03F7EB" ,
-        "#6B0504" ,
-        "#388697" ,
-        "#F40000" ,
-        "#FA8334" ,
+        "#DB7F8E",
+        "#E8C547",
+        "#001514",
+        "#F15BB5",
+        "#03F7EB",
+        "#6B0504",
+        "#388697",
+        "#F40000",
+        "#FA8334",
 
     ]
-    return colorArr[Math.floor( Math.random() * colorArr.length )]
+    return colorArr[Math.floor(Math.random() * colorArr.length)]
 }
 
 
-function setRandomColorToRightOfAbout(){
+function setRandomColorToRightOfAbout() {
     document.getElementById("my_pic").style.backgroundColor = getRandomColor()
 }
 
-document.querySelector("#about").addEventListener("mousemove" , (dets)=>{
+document.querySelector("#about").addEventListener("mousemove", (dets) => {
 
     // console.log("In About Section" , getRandomColor())
 
@@ -80,8 +95,6 @@ setRandomColorToRightOfAbout()
 
 
 // // // Hover and create div with image ----->
-
-
 
 const throttleFunction = (func, delay) => {
 
@@ -109,8 +122,6 @@ const throttleFunction = (func, delay) => {
 }
 
 
-
-
 function randomImg() {
     let images = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCe96xcjYnpr4twMSox-dSbJraEvvknk2wjg&usqp=CAU",
@@ -126,7 +137,7 @@ function randomImg() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsik0vIMpdJlFgf3ElDxQJKYqlNNc4yICcV6O6FoMHevwhineR_aslFq0QUUq4gsvqxYc&usqp=CAU",
         "https://img.freepik.com/premium-photo/realistic-image-eye-iris-cornea-retina-with-luminous-flash-light-blue-eye-3d-illustration_508524-254.jpg?w=2000",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_fpPmbK-bebEeX036y7frmW06amtCkG1ew&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcd08Atj6O4yBZDzCJp7H0msdHXc10gNr10KT9zyAthRC58FXlfArta_6fYDq0RIBcEo&usqp=CAU" ,
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcd08Atj6O4yBZDzCJp7H0msdHXc10gNr10KT9zyAthRC58FXlfArta_6fYDq0RIBcEo&usqp=CAU",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9IFzxKtkXWiPakqTSyEIUsxf3qrTvksRPPw&usqp=CAU",
 
     ];
@@ -137,21 +148,20 @@ function randomImg() {
 }
 
 
-
-document.querySelector("#project_show").addEventListener("mousemove" ,  throttleFunction( (d)=>{
+document.querySelector("#project_show").addEventListener("mousemove", throttleFunction((d) => {
 
 
     // console.log(d.clientX)
-    
+
     let createdDiv = document.createElement("div")
     createdDiv.classList.add("careted_div_by_js")
-    createdDiv.style.left = d.clientX-50+ "px"
-    createdDiv.style.top = d.clientY-70+ "px"
+    createdDiv.style.left = d.clientX - 50 + "px"
+    createdDiv.style.top = d.clientY - 170 + "px"
     // console.log(createdDiv)
 
 
     let img = document.createElement("img");
-    img.setAttribute( "src" , randomImg() );
+    img.setAttribute("src", randomImg());
 
     createdDiv.appendChild(img)
 
@@ -161,11 +171,10 @@ document.querySelector("#project_show").addEventListener("mousemove" ,  throttle
     // img.style.transform = "rotate(50deg)"
 
 
-    // console.log(createdDiv)
+    console.log(createdDiv)
 
-    gsap.to( img  , {
-        y : 0 ,
-        
+    gsap.to(img, {
+        y: 0,
     })
 
 
@@ -175,10 +184,25 @@ document.querySelector("#project_show").addEventListener("mousemove" ,  throttle
         createdDiv.remove()
     }, 1200)
 
-} , 270))
+}, 350))
 
 
 
+
+
+// // // progress here ------>
+
+// let valueArr = [75 , 70 , 80 , 75 , 75 , 70 , 70 , 80 , 65]
+
+// setTimeout( ()=>{
+
+//     document.querySelectorAll("progress").forEach( (p , i)=>{
+//         // console.log(p.value)
+    
+//         p.value = valueArr[i] 
+//     } )
+
+// } , 1000 )
 
 
 
@@ -214,22 +238,22 @@ let nameRejex = /^[A-Za-z\ss]{1,35}$/
 // // // Some Enter hadlers -------->
 
 // // Name ---->
-document.getElementById("name_contact").addEventListener( "keydown" , function(e){
+document.getElementById("name_contact").addEventListener("keydown", function (e) {
     // console.log(e)
-    if(e.code === "Enter"){document.getElementById("email_contact").focus()}
-} )
+    if (e.code === "Enter") { document.getElementById("email_contact").focus() }
+})
 
 // // Email ---->
-document.getElementById("email_contact").addEventListener( "keydown" , function(e){
+document.getElementById("email_contact").addEventListener("keydown", function (e) {
     // console.log(e)
-    if(e.code === "Enter"){document.getElementById("message_contact").focus()}
-} )
+    if (e.code === "Enter") { document.getElementById("message_contact").focus() }
+})
 
 // // MEssage ---->
-document.getElementById("message_contact").addEventListener( "keydown" , function(e){
+document.getElementById("message_contact").addEventListener("keydown", function (e) {
     // console.log(e)
-    if(e.code === "Enter"){contectFormSubmit()}
-} )
+    if (e.code === "Enter") { contectFormSubmit() }
+})
 
 // // // Actual contect form handler code here ------------------------>
 
