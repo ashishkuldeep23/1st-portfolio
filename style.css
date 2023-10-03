@@ -8,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: all .7s;
+    transition: all 1s;
 }
 
 
@@ -36,12 +36,16 @@ body {
     /* position: relative; */
     /* background: rgb(238, 174, 202); */
     /* background: linear-gradient(90deg, #aeeebccc 30%, #94e9dedb 49%); */
-    
+
     /* background-color: #d1ffec; */
     background-color: white;
-    background: linear-gradient(150deg, white 20%,#fef8cc 5%,  white 50% );
+    background: linear-gradient(150deg, white 20%, #fef8cc 5%, white 50%);
 
-    color: var(--theme);
+    /* background: linear-gradient(150deg, black 20%,#812f92 5%,  black 50% ); */
+    /* color: white; */
+
+    /* color: var(--theme); */
+
     text-align: center;
 }
 
@@ -96,17 +100,93 @@ h1:hover {
 }
 
 
-#dark_btn {
-
+#dark_div_hold {
     position: absolute;
-    left: 5px;
-    border-radius: 50%;
-    height: fit-content;
-    padding: 0 0.5vh;
-    background-color: var(--theme);
-    color: white;
+    top: 0vh;
+    left: 0vh;
+
+    height: 13vh;
+    width: 13vh;
+    /* border: 1px solid red; */
+
 }
 
+
+#make_dark_div {
+    height: 8vh;
+    width: 6vh;
+    background-color: yellow;
+    border: 1px solid black;
+
+    position: absolute;
+    top: 1vh;
+    left: 3vh;
+    border-radius: 50%;
+    padding: 0 0.5vh;
+
+    animation: dark_div_ani 5s linear infinite reverse;
+    /* height: fit-content; */
+    /* background-color: var(--theme);
+    color: white; */
+    z-index: 20;
+    /* overflow: hidden; */
+}
+
+#make_dark_div::before {
+    content: "";
+    height: 6vh;
+    width: 20%;
+    background-color: black;
+
+    position: absolute;
+    top: -6vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+}
+
+
+
+
+/* Animation for dark mode div or toggel btn -->💡 */
+
+@keyframes dark_div_ani {
+
+    /* top */
+    0% {
+        top: 1vh;
+        left: 3vh;
+    }
+
+
+    /* left */
+    25% {
+        top: 3vh;
+        left: 5vh;
+    }
+
+
+    /* bottom */
+    50% {
+        top: 5vh;
+        left: 3vh;
+    }
+
+
+    /* right */
+    75% {
+        top: 3vh;
+        left: 1vh;
+    }
+
+
+}
+
+
+
+
+/* This class in span tag used many time to gie focus to user. */
 
 .focus_span {
     color: white;
@@ -135,7 +215,7 @@ h1:hover {
 
 
 nav>ul {
-    width: 45vh;
+    width: 50vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
     /* filter:blur(20px) saturate(1.7) ; */
@@ -149,39 +229,80 @@ nav>ul {
     justify-content: space-between;
 
     position: relative;
+    overflow: hidden;
 }
 
 
-nav>ul::after {
-    content: "";
-    background-color: red;
+#scrool_percent {
+    background-color: #17c5c8;
     height: 2px;
-    /* width: 70%; */
+    /* width: 100%; */
 
     position: absolute;
     bottom: 0;
+    left: 0;
+    border-radius: 100px;
 }
+
 
 
 nav>ul>li {
     transition: .3s all;
     padding: 0 0.5vh;
+    border: 2px solid transparent;
+    transition: 0.2s all;
 }
 
 nav>ul>li:is(:hover, :active) {
-    background-color: #89e5ff;
+    border: 2px solid #89e5ff;
     border-radius: 100px;
     backdrop-filter: blur(20px) saturate(1.7);
+    font-weight: bold;
 }
 
 
 nav a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
+    /* color: darkmagenta; */
+    color: #17c5c8;
     font-size: 1.1rem;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
 
+
+#change_content_parent {
+    display: flex;
+    justify-content: center;
+}
+
+
+#change_content {
+    color: red;
+    margin-left: 7px;
+    border-right: 3px solid;
+
+
+    overflow: hidden;
+    /* width: 20ch; */
+    /* animation: typing 4s infinite steps(20); */
+    white-space: nowrap;
+}
+
+
+/* Noq doing this by js (Copy pasted code from codepen) */
+
+/* @keyframes typing {
+
+    from {
+        width: 0%;
+    }
+
+}
+*/
 
 
 
@@ -218,7 +339,7 @@ nav a {
     margin: 2vh;
     height: 38vh;
     width: 38vh;
-    border-radius: 50%;
+    border-radius: 47% 53% 43% 57% / 65% 35% 65% 35%;
     background-color: var(--theme);
     border: 1px solid black;
     text-transform: capitalize;
@@ -351,6 +472,7 @@ nav a {
 }
 
 #skill>div:last-child {
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,9 +570,9 @@ nav a {
     border-radius: 1vh;
     margin: 2vh;
     margin-top: 5vh;
+    height: 45vh;
     width: 40vh;
     /* aspect-ratio: 1/1; */
-    height: 40vh;
     border: 1px solid;
     overflow: hidden;
     position: relative;
@@ -584,13 +706,17 @@ nav a {
 
 #contect {
     min-height: 75vh;
-    margin: 10vh 0;
+    margin-top: 10vh;
     padding-top: 10vh;
+
+    background-color: black;
+    border-top: 2px solid #fff;
+    color: white;
 }
 
 
 
-#contect>div:last-child {
+#contect>#contect_main_content {
 
     padding: 5vh 2v;
     display: flex;

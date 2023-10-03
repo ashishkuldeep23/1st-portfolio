@@ -1,0 +1,107 @@
+
+
+/* Not doing in this breakpoin for now */
+
+/* Till now done 03/10 */
+
+@media (max-width : 1054px) {}
+
+
+
+
+@media (max-width : 847px) {
+
+
+    #about>div {
+        flex-direction: column-reverse;
+    }
+
+
+    #about>.bottomIDo {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #skill {
+        height: auto;
+    }
+
+
+    #skill>div:last-child {
+        flex-direction: column;
+    }
+
+
+    #skill>div>.right {
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+
+@media (max-width : 723px) {
+
+    #about>.bottomIDo>div {
+        width: 98%;
+    }
+
+    #projects>div {
+        width: 98%;
+    }
+
+    #projects>#project_show {
+        
+        padding: 13vh 2vh;
+        margin: 5vh 0;
+    }
+
+    #project_show>h2 {
+        font-size: 6.5rem;
+        letter-spacing: 3px;
+    }
+
+}
+
+
+
+
+
+@media (max-width : 430px) {
+
+    #about>.bottomIDo .icon_hold {
+        width: 98%;
+    }
+
+
+    #skill>div>.left>div>progress {
+        width: 20vh;
+    }
+
+
+    #projects>#project_show {
+
+        padding: 15vh 2vh;
+        margin: 5vh 0;
+    }
+
+
+    #project_show>h2 {
+        font-size: 4.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width : 283px) {
+    #skill>div>.left>div>progress {
+        width: 15vh;
+    }
+
+    #project_show>h2 {
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+    }
+}

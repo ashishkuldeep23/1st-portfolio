@@ -1,20 +1,20 @@
 
 // // // Follow mause (skew is not completed)---->
 // // Two way to do this -->
-// // 1st is without gsap
 
+// // 1st is without gsap (This is good no dependancy needed)
 window.addEventListener("mousemove", (values) => {
-    
+
     // console.log(values)
     let x = values.clientX
     let y = values.clientY
-    document.getElementById("tracker").style.transform = `translate(${x}px , ${y-95}px)`
-    
+    document.getElementById("tracker").style.transform = `translate(${x}px , ${y - 95}px)`
+
 })
 
 
 
-// // 1st is with gsap
+// // 2st is with gsap
 function cursorAnimation() {
     document.addEventListener("mousemove", function (dets) {
         gsap.to("#tracker", {
@@ -27,6 +27,19 @@ function cursorAnimation() {
 
 
 // cursorAnimation()
+
+
+
+// // // Make theme dark ----->
+// // // Light and dark mode ---->
+// // Pending -->
+
+function changeThemeDark(event) {
+    console.log(event)
+    alert("Let's make theme to dark")
+    console.log("Ok")
+}
+
 
 
 
@@ -49,6 +62,87 @@ function showMenuBtn() {
 
     menuBtnClicked = !menuBtnClicked
 }
+
+
+
+// // // Get scrool value and increase the width of div ---- >
+
+let scrollShowDiv = document.querySelector("#scrool_percent")
+
+document.addEventListener("scroll", () => {
+
+    // console.log(dets)
+
+    let totalHeightOfWebPage = document.body.scrollHeight
+
+    let currentDistanceFromTop = document.documentElement.scrollTop
+
+    const windowHeight = document.documentElement.clientHeight
+
+    const scroolPercentge = (currentDistanceFromTop / (totalHeightOfWebPage - windowHeight)) * 100
+
+    // console.log(scroolPercentge)
+
+    scrollShowDiv.style.width = Math.round(scroolPercentge) + "%"
+
+
+})
+
+
+
+
+
+
+// // // Writing animation code copy pasted from codepen and used in text. 
+
+function textAnimationCode() {
+    // function([string1, string2],target id,[color1,color2])    
+    consoleText(["Full Stack Developer.", "MERN Developer.", "React Developer.", "NodeJs Developer."], 'change_content', ['tomato', 'rebeccapurple', 'lightblue']);
+
+    function consoleText(words, id, colors = ["red"]) {
+        if (colors === undefined) colors = ['red'];
+        var visible = true;
+        // var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function () {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function () {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function () {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+
+    }
+}
+
+
+
+textAnimationCode()
+
 
 
 
@@ -79,9 +173,7 @@ function setRandomColorToRightOfAbout() {
 }
 
 document.querySelector("#about").addEventListener("mousemove", (dets) => {
-
     // console.log("In About Section" , getRandomColor())
-
     setRandomColorToRightOfAbout()
 })
 
@@ -93,7 +185,7 @@ setRandomColorToRightOfAbout()
 
 
 
-
+// // // Projects are div ----->
 // // // Hover and create div with image ----->
 
 const throttleFunction = (func, delay) => {
@@ -121,7 +213,6 @@ const throttleFunction = (func, delay) => {
     }
 }
 
-
 function randomImg() {
     let images = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCe96xcjYnpr4twMSox-dSbJraEvvknk2wjg&usqp=CAU",
@@ -147,7 +238,6 @@ function randomImg() {
 
 }
 
-
 document.querySelector("#project_show").addEventListener("mousemove", throttleFunction((d) => {
 
 
@@ -171,7 +261,7 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
     // img.style.transform = "rotate(50deg)"
 
 
-    console.log(createdDiv)
+    // console.log(createdDiv)
 
     gsap.to(img, {
         y: 0,
@@ -198,7 +288,7 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 //     document.querySelectorAll("progress").forEach( (p , i)=>{
 //         // console.log(p.value)
-    
+
 //         p.value = valueArr[i] 
 //     } )
 
@@ -225,7 +315,7 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 
 
-
+// // // Contect me with gmail code here  -------->
 // // // Conect code ----------------->
 
 

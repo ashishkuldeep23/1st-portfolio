@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio - Ashish Kuldeep</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./mediaQueries.css">
 
 
         <!-- Remix icon -->
@@ -18,14 +19,19 @@
 
         <nav>
 
-            <button id="dark_btn"><i><i class="ri-contrast-2-fill"></i></i></button>
+            <!-- <button id="dark_btn"><i><i class="ri-contrast-2-fill"></i></i></button> -->
 
             <ul id="tab_Holder_ul">
+
+
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skill">Skill</a></li>
                 <li><a href="#projects">Project</a></li>
                 <li><a href="#contect">Contact</a></li>
+
+                <span id="scrool_percent"></span>
+
             </ul>
 
 
@@ -35,7 +41,22 @@
 
 
         <section>
+
+            <div onclick="changeThemeDark()" id="dark_div_hold">
+
+                <div id="make_dark_div">
+                    <!-- <i><i class="ri-contrast-2-fill"></i></i> -->
+                    <!-- <img src="https://png.pngtree.com/element_our/20190602/ourmid/pngtree-yellow-lightning-bulb-illustration-image_1411541.png" alt=""> -->
+                </div>
+            </div>
+
+
             <h1><span class="focus_span">Hey</span> I'm Ashish Kuldeep</h1>
+
+
+            <h2 id="change_content_parent">I'm  <span id="change_content"></span></h2>
+
+
         </section>
 
 
@@ -135,7 +156,7 @@
             <!-- <h2>Skills here</h2> -->
 
             <div>
-                <h2>I have necessary skills to develop a <span class="focus_span">full stack</span>.</h2>
+                <h2>I have necessary skills to develop a <span class="focus_span">Full Stack</span> web app.</h2>
             </div>
 
             <div>
@@ -225,7 +246,6 @@
 
 
 
-
         <section id="projects">
 
             <h2>Top <span class="focus_span">Projects</span></h2>
@@ -276,7 +296,7 @@
             </div>
 
 
-            <div>
+            <div id="contect_main_content">
 
                 <div class="left">
                     <h3>By <span class="focus_span">Social Media</span></h3>
@@ -320,15 +340,15 @@
 
                                     <h3>By <span class="focus_span">Gmail</span></h3>
 
-                                    <label for="name">Name<i class="ri-arrow-down-double-line"></i></label>
+                                    <label for="name_contact">Name<i class="ri-arrow-down-double-line"></i></label>
                                     <input type="text" name="user_name" id="name_contact" placeholder="Jhon Cena"
                                         onkeypress='return event.charCode >= 65 && event.charCode <= 122 || event.charCode <= 32'>
 
-                                    <label for="email">Email<i class="ri-arrow-down-double-line"></i></label>
+                                    <label for="email_contact">Email<i class="ri-arrow-down-double-line"></i></label>
                                     <input type="email" name="user_email" id="email_contact"
                                         placeholder="jhoncena@gmail.com">
 
-                                    <label for="message">Message<i class="ri-arrow-down-double-line"></i></label>
+                                    <label for="message_contact">Message<i class="ri-arrow-down-double-line"></i></label>
                                     <textarea name="user_message" id="message_contact" cols="30" rows="10"
                                         placeholder="Very nice"></textarea>
 
@@ -345,16 +365,19 @@
             </div>
 
 
-        </section>
 
-
-
-        <section id="footer">
-            <div>
+            <div id="footer">
                 <h2>Thank you for readting</h2>
-
             </div>
+
+
         </section>
+
+
+
+
+
+
 
 
         <!-- <div>
@@ -374,7 +397,9 @@
 
 
         <!-- GSAP cdn  -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+            integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="index.js"></script>
 
