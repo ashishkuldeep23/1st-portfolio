@@ -1,4 +1,6 @@
+
 :root {
+    /* --theme: #FFB000; */
     --theme: #00008b;
     --text: #000000;
 }
@@ -8,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: all 1s;
+    transition: all 0.2s;
 }
 
 
@@ -38,33 +40,21 @@ body {
     /* background: linear-gradient(90deg, #aeeebccc 30%, #94e9dedb 49%); */
 
     /* background-color: #d1ffec; */
-    background-color: white;
+    /* background-color: white; */
     background: linear-gradient(150deg, white 20%, #fef8cc 5%, white 50%);
 
     /* background: linear-gradient(150deg, black 20%,#812f92 5%,  black 50% ); */
     /* color: white; */
 
     /* color: var(--theme); */
-
+    
+    transition: all 0.5s;
     text-align: center;
 }
 
 
 hr {
     color: var(--theme);
-}
-
-
-nav {
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    position: fixed;
-    top: 5px;
-    z-index: 9999;
 }
 
 
@@ -76,9 +66,6 @@ h1 {
 }
 
 
-h1:hover {
-    font-stretch: 500%;
-}
 
 
 /*   Tracker div position should be fixed not absolute ------->  */
@@ -108,6 +95,9 @@ h1:hover {
     height: 13vh;
     width: 13vh;
     /* border: 1px solid red; */
+    /* background-color: rebeccapurple; */
+
+    z-index: 99999;
 
 }
 
@@ -117,6 +107,7 @@ h1:hover {
     width: 6vh;
     background-color: yellow;
     border: 1px solid black;
+    /* outline: 1px solid white; */
 
     position: absolute;
     top: 1vh;
@@ -128,7 +119,7 @@ h1:hover {
     /* height: fit-content; */
     /* background-color: var(--theme);
     color: white; */
-    z-index: 20;
+    z-index: -20;
     /* overflow: hidden; */
 }
 
@@ -137,13 +128,15 @@ h1:hover {
     height: 6vh;
     width: 20%;
     background-color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 
     position: absolute;
     top: -6vh;
     left: 50%;
 
     transform: translate(-50%, 0);
-
+    z-index: -20;
 }
 
 
@@ -196,6 +189,7 @@ h1:hover {
     background-size: cover;
 
     transition: all 0.2s;
+    filter: drop-shadow(2px 2px 2px white);
 }
 
 
@@ -210,15 +204,35 @@ h1:hover {
 
     background-origin: padding-box;
 
-    filter: drop-shadow(1px 1px 2px black);
+    filter: drop-shadow(2px 2px 2px black);
 }
+
+
+
+
+nav {
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    position: fixed;
+    top: 5px;
+    z-index: 9999;
+}
+
+
+nav>#show_menu_btn{
+    display: none;
+}
+
 
 
 nav>ul {
     width: 50vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
-    /* filter:blur(20px) saturate(1.7) ; */
 
     border: 1px solid white;
     padding: 1vh 2vh;
@@ -233,6 +247,7 @@ nav>ul {
 }
 
 
+/* This div present to show scoll value as width */
 #scrool_percent {
     background-color: #17c5c8;
     height: 2px;
@@ -274,7 +289,11 @@ nav a:hover {
 }
 
 
+
+/* Writting animation div  */
+
 #change_content_parent {
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
 }
@@ -293,16 +312,6 @@ nav a:hover {
 }
 
 
-/* Noq doing this by js (Copy pasted code from codepen) */
-
-/* @keyframes typing {
-
-    from {
-        width: 0%;
-    }
-
-}
-*/
 
 
 
@@ -710,7 +719,7 @@ nav a:hover {
     padding-top: 10vh;
 
     background-color: black;
-    border-top: 2px solid #fff;
+    border-top: 2px solid var(--theme);
     color: white;
 }
 
@@ -982,17 +991,22 @@ nav a:hover {
 
 
 
-
-
 /* Below class used in menu by js */
-
+/* 
 .menu_nav {
-    justify-content: flex-end;
-    align-items: baseline;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    height: max-content;
 }
 
 
 .menu_nav>ul {
+
+    border: 0px ;
+    backdrop-filter: blur(0px) saturate(0);
+    background-color: transparent;
+
     border-radius: 0;
     display: block;
     width: fit-content;
@@ -1001,6 +1015,7 @@ nav a:hover {
     border-radius: 2vh;
 }
 
+ */
 
 
 
@@ -1013,7 +1028,7 @@ nav a:hover {
 
 
     color: var(--theme);
-    transform: scale(2);
+    transform: scale(3);
     padding: .2vh 0.5vh;
 
     text-decoration: none;

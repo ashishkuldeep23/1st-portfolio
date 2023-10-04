@@ -1,5 +1,3 @@
-
-
 /* Not doing in this breakpoin for now */
 
 /* Till now done 03/10 */
@@ -33,7 +31,13 @@
 
 
     #skill>div>.right {
-        margin-left: 0;
+        display: none;
+        /* margin-left: 0; */
+    }
+
+
+    #goto_top {
+        left: 80%;
     }
 
 }
@@ -53,7 +57,7 @@
     }
 
     #projects>#project_show {
-        
+
         padding: 13vh 2vh;
         margin: 5vh 0;
     }
@@ -69,7 +73,46 @@
 
 
 
-@media (max-width : 430px) {
+@media (max-width : 440px) {
+
+    nav {
+        justify-content: center;
+        align-items: end;
+        flex-direction: column;
+        padding: 1vh 0;
+        height: fit-content;
+    }
+
+    nav>#show_menu_btn {
+        display: block;
+        margin: 0 1.5vh;
+    }
+
+
+    nav>ul {    
+
+        height: 3px;
+
+        /* height: max-content; */
+
+        display: block;
+        width: fit-content;
+
+        border: 0px;
+        backdrop-filter: blur(20px) saturate(1.7);
+
+        border-radius: 0;
+        margin: 0;
+        font-size: 1.3rem;
+        border-radius: 2vh;
+        padding: 0;
+    }
+
+
+    #change_content_parent {
+        font-size: 1.7rem;
+    }
+
 
     #about>.bottomIDo .icon_hold {
         width: 98%;
@@ -78,6 +121,11 @@
 
     #skill>div>.left>div>progress {
         width: 20vh;
+    }
+
+
+    #projects>div {
+        padding: 7vh 2vh;
     }
 
 
@@ -92,10 +140,17 @@
         font-size: 4.5rem;
         letter-spacing: 1px;
     }
+
+
 }
 
 
 @media (max-width : 283px) {
+
+    #change_content_parent {
+        font-size: 1.2rem;
+    }
+
     #skill>div>.left>div>progress {
         width: 15vh;
     }

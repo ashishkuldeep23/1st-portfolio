@@ -13,7 +13,6 @@ window.addEventListener("mousemove", (values) => {
 })
 
 
-
 // // 2st is with gsap
 function cursorAnimation() {
     document.addEventListener("mousemove", function (dets) {
@@ -30,14 +29,51 @@ function cursorAnimation() {
 
 
 
+
+
 // // // Make theme dark ----->
 // // // Light and dark mode ---->
 // // Pending -->
 
+
+document.getElementById("dark_div_hold").addEventListener("click" , changeThemeDark )
+
+let isThemeDarkVal = false 
+
 function changeThemeDark(event) {
-    console.log(event)
-    alert("Let's make theme to dark")
-    console.log("Ok")
+    // console.log(event)
+    // alert("Let's make theme to dark")
+    // console.log("Ok")
+
+    let bodyaTag = document.querySelector("body")
+
+    let buldDiv = document.querySelector("#make_dark_div")
+
+    if(!isThemeDarkVal){
+        bodyaTag.style.background = "linear-gradient(150deg, black 20%,#2b5651d4  5%,  black 50% )"
+        bodyaTag.style.color = "white"
+
+        buldDiv.style.backgroundColor= "transparent"
+        buldDiv.style.borderColor = "white"
+        
+        // document.querySelector(":root").setAttribute("--theme") = "#FFB000"
+
+        document.querySelector(":root").style.setProperty("--theme" , "#FFB000" )
+        
+        
+    }else{
+        bodyaTag.style.background = "linear-gradient(150deg, white 20%, #fef8cc 5%, white 50%)"
+        bodyaTag.style.color = "black"
+        
+        buldDiv.style.backgroundColor= "yellow"
+        buldDiv.style.borderColor = "black"
+
+        document.querySelector(":root").style.setProperty("--theme" , "#00008b" )
+    }   
+
+
+    isThemeDarkVal = !isThemeDarkVal
+
 }
 
 
@@ -51,13 +87,13 @@ let menuBtnClicked = false
 function showMenuBtn() {
     // alert("ok")
 
-    let navTag = document.querySelector("nav")
+    let ulOfNavTag = document.querySelector("nav>ul")
 
     if (!menuBtnClicked) {
 
-        navTag.classList.add("menu_nav")
+        ulOfNavTag.style.height = "fit-content"
     } else {
-        navTag.classList.remove("menu_nav")
+        ulOfNavTag.style.height = "3px"
     }
 
     menuBtnClicked = !menuBtnClicked
@@ -65,7 +101,7 @@ function showMenuBtn() {
 
 
 
-// // // Get scrool value and increase the width of div ---- >
+// // // Get scrool value and increase the width of div (Used in Menu) ---- >
 
 let scrollShowDiv = document.querySelector("#scrool_percent")
 
@@ -97,7 +133,11 @@ document.addEventListener("scroll", () => {
 
 function textAnimationCode() {
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(["Full Stack Developer.", "MERN Developer.", "React Developer.", "NodeJs Developer."], 'change_content', ['tomato', 'rebeccapurple', 'lightblue']);
+    consoleText(
+        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript Coding.", "Tailwind CSS.", "Bootstrap.", "GSAP" , "Animated Website."],
+        'change_content',
+        ['#03F7EB', 'rebeccapurple', '#F15BB5' , 'rebeccapurple', '#03F7EB',   '#F15BB5' , '#03F7EB',  '#F15BB5' , 'rebeccapurple']
+    );
 
     function consoleText(words, id, colors = ["red"]) {
         if (colors === undefined) colors = ['red'];
@@ -139,13 +179,13 @@ function textAnimationCode() {
     }
 }
 
-
-
 textAnimationCode()
 
 
 
 
+
+// // // hover and dv BG Chnaged
 // // // // Read mouse over on about section and change color of image background --->
 
 function getRandomColor() {
@@ -173,6 +213,11 @@ function setRandomColorToRightOfAbout() {
 }
 
 document.querySelector("#about").addEventListener("mousemove", (dets) => {
+    // console.log("In About Section" , getRandomColor())
+    setRandomColorToRightOfAbout()
+})
+
+document.querySelector("#short_intro").addEventListener("mousemove", (dets) => {
     // console.log("In About Section" , getRandomColor())
     setRandomColorToRightOfAbout()
 })
@@ -283,15 +328,11 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 // // // progress here ------>
 
 // let valueArr = [75 , 70 , 80 , 75 , 75 , 70 , 70 , 80 , 65]
-
 // setTimeout( ()=>{
-
 //     document.querySelectorAll("progress").forEach( (p , i)=>{
 //         // console.log(p.value)
-
 //         p.value = valueArr[i] 
 //     } )
-
 // } , 1000 )
 
 
@@ -411,5 +452,8 @@ async function contectFormSubmit() {
     }
 
 }
+
+
+
 
 
