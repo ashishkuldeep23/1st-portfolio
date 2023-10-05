@@ -9,6 +9,11 @@
 
 @media (max-width : 847px) {
 
+        
+    #change_content_parent {
+        font-size: 2rem;
+    }
+
 
     #about>div {
         flex-direction: column-reverse;
@@ -37,7 +42,7 @@
 
 
     #goto_top {
-        left: 80%;
+        left: 85%;
     }
 
 }
@@ -47,6 +52,12 @@
 
 
 @media (max-width : 723px) {
+
+    
+    #change_content_parent {
+        font-size: 1.7rem;
+    }
+
 
     #about>.bottomIDo>div {
         width: 98%;
@@ -110,7 +121,7 @@
 
 
     #change_content_parent {
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 
 
@@ -148,7 +159,16 @@
 @media (max-width : 283px) {
 
     #change_content_parent {
-        font-size: 1.2rem;
+        font-size: .7rem;
+    }   
+
+    #about>div>.right{
+        height: 30vh;
+        width: 30vh;
+    }
+
+    #about>div>.right>img {
+        width: 32vh;
     }
 
     #skill>div>.left>div>progress {
@@ -158,5 +178,9 @@
     #project_show>h2 {
         font-size: 3.5rem;
         letter-spacing: 1px;
+    }
+
+    #goto_top {
+        left: 75%;
     }
 }

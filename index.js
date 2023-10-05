@@ -105,8 +105,9 @@ function showMenuBtn() {
 
 let scrollShowDiv = document.querySelector("#scrool_percent")
 
-document.addEventListener("scroll", () => {
+document.addEventListener("scroll", scrollPageAndGetSetData)
 
+function scrollPageAndGetSetData (){
     // console.log(dets)
 
     let totalHeightOfWebPage = document.body.scrollHeight
@@ -119,12 +120,19 @@ document.addEventListener("scroll", () => {
 
     // console.log(scroolPercentge)
 
+    if(scroolPercentge > 10){
+        document.getElementById("goto_top").style.display = "block"
+    }else{
+
+        document.getElementById("goto_top").style.display = "none"
+    }
+
     scrollShowDiv.style.width = Math.round(scroolPercentge) + "%"
 
 
-})
+}
 
-
+scrollPageAndGetSetData()  // // // calling fn first also becoz i want to hide goto btn initially (also without giving any bug).
 
 
 
@@ -134,7 +142,7 @@ document.addEventListener("scroll", () => {
 function textAnimationCode() {
     // function([string1, string2],target id,[color1,color2])    
     consoleText(
-        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript Coding.", "Tailwind CSS.", "Bootstrap.", "GSAP" , "Animated Website."],
+        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript.", "Tailwind CSS.", "Bootstrap.", "GSAP" , "Animated Website." , "PWA" , "Offline Web" ],
         'change_content',
         ['#03F7EB', 'rebeccapurple', '#F15BB5' , 'rebeccapurple', '#03F7EB',   '#F15BB5' , '#03F7EB',  '#F15BB5' , 'rebeccapurple']
     );
@@ -317,7 +325,7 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
     setTimeout(() => {
         createdDiv.remove()
-    }, 1200)
+    }, 1000)
 
 }, 350))
 
