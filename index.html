@@ -177,7 +177,7 @@
 
                     <div draggable="true">
                         <label for="backend"><strong><span class="focus_span">BackEnd</span></strong> :-</label>
-                        <progress id="frontend" value="70" max="100"></progress>
+                        <progress id="backend" value="70" max="100"></progress>
                         <span><strong>70%</strong></span>
                     </div>
 
@@ -251,7 +251,7 @@
 
         <section id="projects">
 
-            <h2>Top <span class="focus_span">Projects</span></h2>
+            <h2><i class="ri-attachment-2"></i> Top <span class="focus_span">Projects</span></h2>
             <div>
 
                 <div class="project_card">
@@ -294,7 +294,7 @@
         <section id="contect">
 
             <div>
-                <h2><span class="focus_span">Contect</span> Me</h2>
+                <h2> <i class="ri-profile-fill"></i> <span class="focus_span">Contect</span> Me</h2>
 
             </div>
 
@@ -302,7 +302,53 @@
             <div id="contect_main_content">
 
                 <div class="left">
-                    <h3>By <span class="focus_span">Social Media</span></h3>
+
+                    <div class="contect_div">
+
+                        <div class="inner">
+                            <div class="form_div">
+                                <form action="" method="" id="contect_form">
+
+                                    <!-- <h3>By <span class="focus_span">Mail</span></h3> -->
+
+                                    <!-- <label for="name_contact">Name<i class="ri-arrow-down-double-line"></i></label> -->
+                                    <input type="text" name="user_name" id="name_contact" placeholder="Your Name"
+                                        onkeypress='return event.charCode >= 65 && event.charCode <= 122 || event.charCode <= 32'
+                                    >
+
+                                    <!-- <label for="email_contact">Email<i class="ri-arrow-down-double-line"></i></label> -->
+                                    <input type="email" name="user_email" id="email_contact"
+                                        placeholder="Your Email"
+                                    >
+
+                                    <!-- <label for="message_contact">Message<i class="ri-arrow-down-double-line"></i></label> -->
+                                    <textarea name="user_message" id="message_contact" cols="30" rows="3"
+                                        placeholder="Message"
+                                    ></textarea>
+
+                                    <p class="button" onclick="contectFormSubmit()">Send Email</p>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <h3>Get in touch</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia necessitatibus tempora blanditiis exercitationem, est delectus beatae voluptatum vitae aut saepe sint itaque id nostrum repellat totam eum, officia voluptates placeat!</p>
+
+                    <h3>My Address</h3>
+
+                    <ul>
+                        <li> <i class="ri-map-pin-line"></i> Gonda,UP, India</li>
+                        <li> <i class="ri-smartphone-line"></i> +91 9264981073</li>
+                        <li> <i class="ri-mail-line"></i> ashishkuldeep6@gmail.com</li>
+                    </ul>
 
 
 
@@ -334,62 +380,21 @@
 
                 </div>
 
-                <div class="right">
-                    <div class="contect_div">
 
-                        <div class="inner">
-                            <div class="form_div">
-                                <form action="" method="" id="contect_form">
 
-                                    <h3>By <span class="focus_span">Gmail</span></h3>
 
-                                    <label for="name_contact">Name<i class="ri-arrow-down-double-line"></i></label>
-                                    <input type="text" name="user_name" id="name_contact" placeholder="Jhon Cena"
-                                        onkeypress='return event.charCode >= 65 && event.charCode <= 122 || event.charCode <= 32'>
 
-                                    <label for="email_contact">Email<i class="ri-arrow-down-double-line"></i></label>
-                                    <input type="email" name="user_email" id="email_contact"
-                                        placeholder="jhoncena@gmail.com">
-
-                                    <label for="message_contact">Message<i class="ri-arrow-down-double-line"></i></label>
-                                    <textarea name="user_message" id="message_contact" cols="30" rows="10"
-                                        placeholder="Very nice"></textarea>
-
-                                    <p class="button" onclick="contectFormSubmit()">Send Mail</p>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
 
 
 
             <div id="footer">
-                <h2>Thank you for readting</h2>
+                <h2>Thank you for reading</h2>
             </div>
 
 
         </section>
-
-
-
-
-
-
-
-
-        <!-- <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quibusdam tempore, non possimus
-            molestias, cum voluptate quidem impedit, aspernatur neque sunt esse ipsam id doloribus amet in? Est dolor
-            explicabo ex quas eum quaerat quam veniam doloribus voluptatibus et 
-        </div> -->
-
-
 
 
 

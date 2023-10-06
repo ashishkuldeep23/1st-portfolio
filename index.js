@@ -3,17 +3,32 @@
 // // Two way to do this -->
 
 // // 1st is without gsap (This is good no dependancy needed)
+
+let trackerDiv = document.getElementById("tracker")
+let timeOut;
+
 window.addEventListener("mousemove", (values) => {
+
+    clearTimeout(timeOut)
+
+    trackerDiv.style.visibility = "visible"
 
     // console.log(values)
     let x = values.clientX
     let y = values.clientY
-    document.getElementById("tracker").style.transform = `translate(${x}px , ${y - 95}px)`
+
+
+    trackerDiv.style.transform = `translate(${x}px , ${y -90}px)`
+
+
+    timeOut = setTimeout( ()=>{
+        trackerDiv.style.visibility = "hidden"
+    } , 250)
 
 })
 
 
-// // 2st is with gsap
+// // 2st is with gsap (Not using now)
 function cursorAnimation() {
     document.addEventListener("mousemove", function (dets) {
         gsap.to("#tracker", {
@@ -25,7 +40,7 @@ function cursorAnimation() {
 }
 
 
-// cursorAnimation()
+
 
 
 
@@ -36,11 +51,11 @@ function cursorAnimation() {
 // // Pending -->
 
 
-document.getElementById("dark_div_hold").addEventListener("click" , changeThemeDark )
+document.getElementById("dark_div_hold").addEventListener("click", changeThemeDark)
 
-let isThemeDarkVal = false 
+let isThemeDarkVal = false
 
-function changeThemeDark(event) {
+function changeThemeDark() {
     // console.log(event)
     // alert("Let's make theme to dark")
     // console.log("Ok")
@@ -49,27 +64,39 @@ function changeThemeDark(event) {
 
     let buldDiv = document.querySelector("#make_dark_div")
 
-    if(!isThemeDarkVal){
+    if (!isThemeDarkVal) {
+        // // // dark Code --->
+  
+        // // // Some root variable value changing ----> 
+        // document.querySelector(":root").setAttribute("--theme") = "#FFB000"
+
+        document.querySelector(":root").style.setProperty("--theme", "#FFB000")
+        document.querySelector(":root").style.setProperty("--text", "#fff")
+        document.querySelector(":root").style.setProperty("--Shadow_of_bulb", "hidden")
+
+
         bodyaTag.style.background = "linear-gradient(150deg, black 20%,#2b5651d4  5%,  black 50% )"
         bodyaTag.style.color = "white"
 
-        buldDiv.style.backgroundColor= "transparent"
-        buldDiv.style.borderColor = "white"
-        
+        buldDiv.style.backgroundColor = "transparent"
+
+    } else {
+        // // // Light Code --->
+ 
+        // // // Some root variable value changing ----> 
         // document.querySelector(":root").setAttribute("--theme") = "#FFB000"
 
-        document.querySelector(":root").style.setProperty("--theme" , "#FFB000" )
-        
-        
-    }else{
+        document.querySelector(":root").style.setProperty("--theme", "#00008b")
+        document.querySelector(":root").style.setProperty("--text", "#000")
+        document.querySelector(":root").style.setProperty("--Shadow_of_bulb", "visible")
+
+
         bodyaTag.style.background = "linear-gradient(150deg, white 20%, #fef8cc 5%, white 50%)"
         bodyaTag.style.color = "black"
-        
-        buldDiv.style.backgroundColor= "yellow"
-        buldDiv.style.borderColor = "black"
 
-        document.querySelector(":root").style.setProperty("--theme" , "#00008b" )
-    }   
+        buldDiv.style.backgroundColor = "yellow"
+
+    }
 
 
     isThemeDarkVal = !isThemeDarkVal
@@ -107,7 +134,7 @@ let scrollShowDiv = document.querySelector("#scrool_percent")
 
 document.addEventListener("scroll", scrollPageAndGetSetData)
 
-function scrollPageAndGetSetData (){
+function scrollPageAndGetSetData() {
     // console.log(dets)
 
     let totalHeightOfWebPage = document.body.scrollHeight
@@ -120,9 +147,9 @@ function scrollPageAndGetSetData (){
 
     // console.log(scroolPercentge)
 
-    if(scroolPercentge > 10){
+    if (scroolPercentge > 10) {
         document.getElementById("goto_top").style.display = "block"
-    }else{
+    } else {
 
         document.getElementById("goto_top").style.display = "none"
     }
@@ -142,9 +169,9 @@ scrollPageAndGetSetData()  // // // calling fn first also becoz i want to hide g
 function textAnimationCode() {
     // function([string1, string2],target id,[color1,color2])    
     consoleText(
-        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript.", "Tailwind CSS.", "Bootstrap.", "GSAP" , "Animated Website." , "PWA" , "Offline Web" ],
+        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript.", "Tailwind CSS.", "Bootstrap.", "GSAP", "Animated Website.", "PWA", "Offline Web"],
         'change_content',
-        ['#03F7EB', 'rebeccapurple', '#F15BB5' , 'rebeccapurple', '#03F7EB',   '#F15BB5' , '#03F7EB',  '#F15BB5' , 'rebeccapurple']
+        ['#03F7EB', 'rebeccapurple', '#F15BB5', 'rebeccapurple', '#03F7EB', '#F15BB5', '#03F7EB', '#F15BB5', 'rebeccapurple']
     );
 
     function consoleText(words, id, colors = ["red"]) {

@@ -2,6 +2,7 @@
     /* --theme: #FFB000; */
     --theme: #00008b;
     --text: #000000;
+    --Shadow_of_bulb: "visible";
 }
 
 * {
@@ -73,6 +74,7 @@ h1 {
     height: 12px;
     width: 12px;
     background-color: cyan;
+    visibility: hidden;
 
     position: absolute;
 
@@ -105,13 +107,16 @@ h1 {
     height: 8vh;
     width: 6vh;
     background-color: yellow;
-    border: 1px solid black;
+    border: 1px solid var(--text);
     /* outline: 1px solid white; */
 
     position: absolute;
     top: 1vh;
     left: 3vh;
-    border-radius: 50%;
+    border-radius: 30%;
+    /* border-radius: 40%; */
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     padding: 0 0.5vh;
 
     animation: dark_div_ani 5s linear infinite reverse;
@@ -136,6 +141,26 @@ h1 {
 
     transform: translate(-50%, 0);
     z-index: -20;
+}
+
+
+
+
+#make_dark_div::after {
+    content: "";
+    height: 10px;
+    width: 70%;
+    background-color: orange;
+    visibility: var(--Shadow_of_bulb);
+    position: absolute;
+    bottom: -10px;
+    /* border-radius: 50%; */
+    border-radius: 50%;
+
+    transform: rotateX(66deg);
+
+
+    left: 15%;
 }
 
 
@@ -667,6 +692,12 @@ nav a:hover {
 }
 
 
+#projects a {
+    color: var(--theme) !important;
+}
+
+
+
 
 
 
@@ -686,7 +717,7 @@ nav a:hover {
 }
 
 
-
+/* main and Big Heading for hover */
 
 #project_show>h2 {
     font-size: 10rem;
@@ -702,7 +733,7 @@ nav a:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px var(--text);
 
 }
 
@@ -714,7 +745,7 @@ nav a:hover {
 
 
 
-#project_show div{
+#project_show div {
     position: relative;
 }
 
@@ -753,7 +784,7 @@ nav a:hover {
 
 
 #contect {
-    min-height: 75vh;
+    /* min-height: 75vh; */
     margin-top: 10vh;
     padding-top: 10vh;
 
@@ -768,31 +799,189 @@ nav a:hover {
 
     padding: 5vh 2v;
     display: flex;
-
     justify-content: center;
     align-items: center;
 
 }
 
 
+
 #contect>div>.left {
-    border-left: 1px solid;
-    border-radius: 1vh;
-    width: 35%;
     padding: 2vh;
     /* border: 1px solid; */
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* Copy pasted css for contect form (code is mine , so i can copy)*/
+
+
+.contect_div {
+    width: 100%;
+    min-height: 60vh;
+    /* background-color: #fff; */
+    /* border: 1px solid; */
+    margin: 5vh;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .contect_div:hover {
+    background-color: white;
+    transform: scale(1.015);
+    transition: transform 300ms;
+} */
+
+
+.contect_div>.inner {
+    /* background-color: #fff; */
+    /* background-image: linear-gradient(145deg, #ffffaeaa, transparent , transparent, transparent ,transparent, #fcc6fe85); */
+
+    /* border: 1px solid; */
+
+    height: 100%;
+    width: 100%;
+    min-height: inherit;
+    border-radius: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.contect_div>.inner>.form_div {
+    text-align: start;
+    padding: 1vh;
+    width: 100%;
+    border-radius: 1vh;
+    /* border: 2px solid var(--theme); */
+    /* margin: 0.5vh; */
+}
+
+
+#contect_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contect_form>h3 {
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    /* margin-bottom: auto; */
+    /* margin-top: 0; */
+
+}
+
+
+#contect_form>input {
+    /* height: 2rem; */
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5vh;
+    padding-bottom: 2vh;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid cyan;
+
+}
+
+#contect_form>input:focus {
+    background-color: #83fefe;
+}
+
+#contect_form>textarea {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid cyan;
+
+    resize: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#contect_form>textarea:focus {
+    background-color: #83fefe;
+}
+
+#contect_form>.button {
+    /* background-color: blue;
+    color: #fff; */
+    color: darkcyan;
+    font-weight: bolder;
+    margin: 1vh 0;
+    margin-left: auto;
+    margin-right: 2vh;
+    width: fit-content;
+    font-size: 1.3rem;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    border: 1px solid;
+    letter-spacing: 3px;
+    box-shadow: 4px 4px 3px cyan;
+    transition: all .7s ease;
+
+}
+
+#contect_form>.button:hover {
+    /* background-color: green;
+    color: #fff; */
+
+    border: 1px solid darkcyan;
+    box-shadow: -4px 4px 3px cyan;
+}
+
+#contect_form>.button:active {
+    background-color: #fff;
+    color: #fff;
+}
+
+
+
+#contect>div>.right {
+    border-radius: 1vh;
+    width: 40%;
+    padding: 2vh;
+    /* border: 1px solid; */
+    text-align: start;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contect>div>.right>h3{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+
+#contect>div>.right>ul{
+    list-style: none;
 }
 
 
 .social_icon_hold {
-
-    /* min-height: 20vh;
-    border: 1px solid; */
-
     margin-top: 5vh;
-
+    width: 70%;
+    margin: 2vh auto;
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -806,8 +995,6 @@ nav a:hover {
     align-items: center;
 
 }
-
-
 
 
 .social_icon_hold>div>i {
@@ -853,139 +1040,7 @@ nav a:hover {
 
 
 
-#contect>div>.right {
-    padding: 2vh;
-    /* border: 1px solid; */
-    width: 40%;
 
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
-
-/* Copy pasted css for contect form (code is mine , so i can copy)*/
-
-
-.contect_div {
-    width: 60%;
-    min-height: 80vh;
-    /* background-color: #fff; */
-    border: 1px solid;
-    margin: 5vh;
-    padding: 0.7vh;
-    border-radius: 1vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.contect_div:hover {
-    background-color: white;
-    transform: scale(1.015);
-    transition: transform 300ms;
-}
-
-
-.contect_div>.inner {
-    /* background-color: #fff; */
-    background-image: linear-gradient(145deg, #ffffaeaa, transparent, transparent, #fcc6fe85);
-    border: 1px solid;
-
-    height: 100%;
-    width: 100%;
-    min-height: inherit;
-    border-radius: 2vh;
-    padding: 2vh;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-.contect_div>.inner>.form_div {
-    text-align: start;
-    padding: 1vh;
-    width: 85%;
-    border-radius: 1vh;
-    /* border: 2px solid var(--theme); */
-    margin: 0.5vh;
-}
-
-
-#contect_form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contect_form>h3 {
-    text-align: center;
-    font-size: 1.7rem;
-    letter-spacing: 2px;
-    text-decoration: underline;
-    margin-bottom: 1.5vh;
-
-}
-
-
-#contect_form>input {
-    height: 2rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1.5vh;
-
-}
-
-#contect_form>input:focus {
-    background-color: #83fefe;
-}
-
-#contect_form>textarea {
-    resize: none;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-#contect_form>textarea:focus {
-    background-color: #83fefe;
-}
-
-#contect_form>.button {
-    /* background-color: blue;
-    color: #fff; */
-    color: darkgreen;
-    font-weight: bolder;
-    margin: 1vh 0;
-    width: fit-content;
-    font-size: 1.3rem;
-    padding: 0.5vh;
-    border-radius: 0.5vh;
-    border: 1px solid;
-    letter-spacing: 3px;
-    box-shadow: 4px 4px 3px var(--theme);
-    transition: all .7s ease;
-
-}
-
-#contect_form>.button:hover {
-    /* background-color: green;
-    color: #fff; */
-
-    border: 1px solid darkgreen;
-    box-shadow: -4px 4px 3px var(--theme);
-}
-
-#contect_form>.button:active {
-    background-color: black;
-    color: #fff;
-}
 
 
 #footer {
@@ -1049,6 +1104,3 @@ nav a:hover {
     transform: scale(2.5);
     color: darkgreen;
 }
-
-
-
