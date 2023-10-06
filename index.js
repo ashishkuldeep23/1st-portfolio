@@ -305,24 +305,21 @@ const throttleFunction = (func, delay) => {
     }
 }
 
+// // // Add All Projects screen shots here -------->
 function randomImg() {
     let images = [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCe96xcjYnpr4twMSox-dSbJraEvvknk2wjg&usqp=CAU",
-        "https://cdn.w600.comps.canstockphoto.com/colorful-flower-on-black-background-drawing_csp8445899.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3E7HfWciCppTVj2EGrBUt34FtRgsfNMfYzw&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDAVof4m0fMjXXItHlKeAchup0UEcpOZlTxQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeHfzNV8NN2-Qkwk1nQP-mLqHJ0hv6sh6vsQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUQmeEdv_i7t0ojA0UbzTg9XhKIz4FQPtVA&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL4EZYAyZmo19iI-KwaW4X_Zj6ZyJ34ywKaA&usqp=CAU",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609958/iofz19tdkmqioktymhyq.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609957/yjjqghxpxxq89qxzkpuz.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696610020/sfi0dtjcbswkv5zcoiae.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609960/p6hiaatyrveeyeg8hwoc.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608746/nyncxepalfdclcdort1z.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608748/zwj1celkhetkyjs0zpcq.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608750/pzxa5vfyiezgmbavkc57.png",
         "https://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSyt2AuaENY8PrFMU_e2VKzSkDFj6w5wqdQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpip3aneCiD5G9DGvLl_9aCVkciA3rlt1RXw&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsik0vIMpdJlFgf3ElDxQJKYqlNNc4yICcV6O6FoMHevwhineR_aslFq0QUUq4gsvqxYc&usqp=CAU",
-        "https://img.freepik.com/premium-photo/realistic-image-eye-iris-cornea-retina-with-luminous-flash-light-blue-eye-3d-illustration_508524-254.jpg?w=2000",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_fpPmbK-bebEeX036y7frmW06amtCkG1ew&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcd08Atj6O4yBZDzCJp7H0msdHXc10gNr10KT9zyAthRC58FXlfArta_6fYDq0RIBcEo&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9IFzxKtkXWiPakqTSyEIUsxf3qrTvksRPPw&usqp=CAU",
-
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608751/ueole0xmljggzsxxlguz.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608753/h7n3tw25innsvupyfowh.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1694854527/kckqxyoamncconejcjxx.png",
     ];
 
 
@@ -372,15 +369,19 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 
 
-// // // progress here ------>
 
-// let valueArr = [75 , 70 , 80 , 75 , 75 , 70 , 70 , 80 , 65]
-// setTimeout( ()=>{
-//     document.querySelectorAll("progress").forEach( (p , i)=>{
-//         // console.log(p.value)
-//         p.value = valueArr[i] 
-//     } )
-// } , 1000 )
+// Fn to open Project link or Any link ------>
+
+function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png"){
+
+    let askToUser = confirm("Do you want to open Link ??")
+
+    if(askToUser){
+        window.open(url , "__blank")
+    }
+}
+
+// openThisUrlNow()
 
 
 
