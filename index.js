@@ -169,7 +169,7 @@ scrollPageAndGetSetData()  // // // calling fn first also becoz i want to hide g
 function textAnimationCode() {
     // function([string1, string2],target id,[color1,color2])    
     consoleText(
-        ["JS Coding.", "HTML & CSS", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development", "Typescript.", "Tailwind CSS.", "Bootstrap.", "GSAP", "Animated Website.", "PWA", "Offline Web"],
+        ["JS Coding.", "HTML & CSS.", "ReactJS Development.", "NodeJs Development.", "MongoDB.", "MERN Development.", "Typescript.", "Tailwind CSS.", "Bootstrap.", "GSAP.", "Animated Website.", "PWA.", "Offline Web."],
         'change_content',
         ['#03F7EB', 'rebeccapurple', '#F15BB5', 'rebeccapurple', '#03F7EB', '#F15BB5', '#03F7EB', '#F15BB5', 'rebeccapurple']
     );
@@ -253,6 +253,11 @@ document.querySelector("#about").addEventListener("mousemove", (dets) => {
 })
 
 document.querySelector("#short_intro").addEventListener("mousemove", (dets) => {
+    // console.log("In About Section" , getRandomColor())
+    setRandomColorToRightOfAbout()
+})
+
+document.querySelector("#dark_div_hold").addEventListener("click", (dets) => {
     // console.log("In About Section" , getRandomColor())
     setRandomColorToRightOfAbout()
 })
