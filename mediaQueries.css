@@ -25,6 +25,11 @@
         flex-direction: column;
     }
 
+
+    #about>.bottomIDo>div {
+        width: unset;
+    }
+
     #skill {
         height: auto;
     }
