@@ -44,8 +44,6 @@ function cursorAnimation() {
 
 
 
-
-
 // // // Make theme dark ----->
 // // // Light and dark mode ---->
 // // Pending -->
@@ -119,8 +117,17 @@ function showMenuBtn() {
     if (!menuBtnClicked) {
 
         ulOfNavTag.style.height = "fit-content"
+
+        document.querySelector("nav>button").innerHTML = "X"
+        document.querySelector("nav>button").style.padding = "0 2vh"
+        document.querySelector("nav>button").style.backgroundColor = "red"
+        document.querySelector("nav>button").style.color = "#fff"
     } else {
         ulOfNavTag.style.height = "3px"
+        document.querySelector("nav>button").innerHTML = "Menu"
+        document.querySelector("nav>button").style.padding = "0 1vh"
+        document.querySelector("nav>button").style.backgroundColor = "cyan"
+        document.querySelector("nav>button").style.color = "#000"
     }
 
     menuBtnClicked = !menuBtnClicked
@@ -175,8 +182,8 @@ function textAnimationCode() {
     );
 
     function consoleText(words, id, colors = ["red"]) {
-        if (colors === undefined) colors = ['red'];
-        var visible = true;
+        // if (colors === undefined) colors = ['red'];
+        
         // var con = document.getElementById('console');
         var letterCount = 1;
         var x = 1;

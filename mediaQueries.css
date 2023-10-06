@@ -128,14 +128,11 @@
 
 
     nav>ul {
-
         height: 3px;
-
         /* height: max-content; */
 
         display: block;
         width: fit-content;
-
         border: 0px;
         backdrop-filter: blur(20px) saturate(1.7);
 
@@ -156,6 +153,10 @@
         width: 98%;
     }
 
+
+    #about>div p{
+        font-size: 1rem;
+    }
 
     #skill>div>.left>div>progress {
         width: 20vh;

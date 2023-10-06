@@ -22,12 +22,14 @@
 *::-webkit-scrollbar-track {
     width: 7px;
     background: rgb(238, 174, 202);
-    background: linear-gradient(0deg, #aeeebccc 30%, #94e9dedb 49%);
+    /* background: linear-gradient(0deg, #aeeebccc 30%, #94e9dedb 49%); */
+    background: black;
 }
 
 
 *::-webkit-scrollbar-thumb {
-    background-color: white;
+    /* background-color: white; */
+    background-color: var(--theme);
     border-radius: 100px;
 }
 
@@ -249,6 +251,13 @@ nav {
 
 nav>#show_menu_btn {
     display: none;
+
+    background-color: cyan;
+    border-radius: 0.5vh ;
+    padding: 0 1vh;
+    font-weight: bold;
+
+    transition: 1s all;
 }
 
 
@@ -257,7 +266,7 @@ nav>ul {
     width: 50vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
-
+    
     border: 1px solid white;
     padding: 1vh 2vh;
     border-radius: 100px;
@@ -265,7 +274,7 @@ nav>ul {
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
-
+    
     position: relative;
     overflow: hidden;
 }
@@ -322,6 +331,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     color: var(--theme);
+
+    position: relative;
 }
 
 
@@ -588,7 +599,6 @@ nav a:hover {
 #projects>div {
     width: 95%;
     padding: 7vh;
-
     /* background-color: red; */
     border-right: 1px solid var(--theme);
     border-radius: 1vh;
@@ -615,7 +625,6 @@ nav a:hover {
     transition: 0.5s all;
     /* box-shadow: 5px 5px 10px gray; */
     /* transform: rotate(-3deg); */
-
 }
 
 
@@ -658,7 +667,6 @@ nav a:hover {
     position: absolute;
     left: 0;
     bottom: 0px;
-
     transition: 0.5s all;
 }
 
@@ -668,36 +676,61 @@ nav a:hover {
 }
 
 
-.project_card>img {
-    /* object-fit: cover; */
-    width: inherit;
-
+.project_card>h3 {
+    
+    background-color: #000000;
+    color: #00ffff;
+    text-decoration: underline;
 }
 
-.project_card>div {
+
+.project_card>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project_detail_hidden {
 
     background-color: var(--theme);
     color: white;
     position: absolute;
     bottom: -100%;
 
-    padding-bottom: 1vh;
-
+    padding: 1vh 0.5vh;
     transition: .5s all;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
 }
+
+
+
+.project_detail_hidden a{
+    padding: 0 1vh;
+    margin: 0.5vh;
+    border-radius: 0.5vh;
+    background-color: #000;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 999;
+}
+
+
+.project_detail_hidden a:hover{
+    background-color: red;
+}
+
+
 
 .project_card:hover>div {
     /* top: initial; */
     bottom: 0;
 }
-
-
-#projects a {
-    color: var(--theme) !important;
-}
-
-
-
 
 
 
@@ -784,9 +817,11 @@ nav a:hover {
     /* min-height: 75vh; */
     margin-top: 10vh;
     padding-top: 10vh;
+    background-color: black;
 
-    background-color: var(--theme);
-    border-top: 2px solid var(--theme);
+    border-top: 5px dotted var(--theme);
+    border-bottom: 5px dotted var(--theme);
+    border-radius: 5vh;
     color: white;
 }
 
@@ -970,6 +1005,7 @@ nav a:hover {
 }
 
 #contect>div>.right>h3{
+    color: cyan;
     margin-top: 3vh;
     margin-bottom: 1vh;
 }
@@ -1026,7 +1062,7 @@ nav a:hover {
 }
 
 .social_icon_hold i:hover::after {
-    background-color: cyan;
+    background-color: var(--theme);
     top: 0;
     left: 0;
     opacity: 1;
@@ -1049,6 +1085,7 @@ nav a:hover {
 
 
 #footer {
+    color: cyan;
     padding: 5vh 0;
 }
 
