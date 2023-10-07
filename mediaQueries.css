@@ -45,6 +45,13 @@
         /* margin-left: 0; */
     }
 
+    #projects {
+        margin:  0;
+    }
+
+    #projects>h2{
+        margin-top: 0vh;
+    }
 
     #contect>#contect_main_content {
         flex-direction: column;
@@ -158,6 +165,10 @@
         font-size: 1rem;
     }
 
+    #skill>div>.left {
+        padding: 5vh 2vh;
+    }
+
     #skill>div>.left>div>progress {
         width: 20vh;
     }
@@ -219,6 +230,10 @@
 
     #about>div>.right>img {
         width: 32vh;
+    }
+
+    #skill>div>.left {
+        padding: 3vh 1vh;
     }
 
     #skill>div>.left>div>progress {

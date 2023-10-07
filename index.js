@@ -324,20 +324,30 @@ const throttleFunction = (func, delay) => {
 }
 
 // // // Add All Projects screen shots here -------->
+
+// // http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png
+
 function randomImg() {
     let images = [
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693499/ouzhrievj5up773po32r.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609958/iofz19tdkmqioktymhyq.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609957/yjjqghxpxxq89qxzkpuz.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693498/avg186hrznrzxttpkjcm.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696610020/sfi0dtjcbswkv5zcoiae.png",
-        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696609960/p6hiaatyrveeyeg8hwoc.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693489/gb0rzn7njbwl9fxh9lew.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608746/nyncxepalfdclcdort1z.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608748/zwj1celkhetkyjs0zpcq.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693493/kujfucu62ozmrorvxwjr.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608750/pzxa5vfyiezgmbavkc57.png",
-        "https://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693491/ivccwxicfsil3qxvbwn6.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693497/o14ztsxrnkkwg9adezyw.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693494/ospeglmguf3z1fltfn0c.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608751/ueole0xmljggzsxxlguz.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693492/sdve9shzqarh1h90zliq.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696608753/h7n3tw25innsvupyfowh.png",
         "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1694854527/kckqxyoamncconejcjxx.png",
+        "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1696693495/b7h3ez19gijtrim1q7uj.png",
     ];
 
 

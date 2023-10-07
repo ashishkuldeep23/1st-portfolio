@@ -518,16 +518,19 @@ nav a:hover {
 }
 
 #skill>div:last-child {
-    margin-top: 5vh;
+    margin: 5vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 
 
 #skill>div>.left {
-    border-left: 1px solid;
+    border-left: 1px solid var(--theme);
+    border-bottom: 1px solid var(--theme);
     border-radius: 1vh;
     /* width: 20%; */
 
@@ -539,9 +542,18 @@ nav a:hover {
     flex-direction: column;
     /* align-items: baseline; */
     text-transform: capitalize;
+    background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan);
 
-    padding: 5vh 2vh;
+    transition: all 1s;
+
+    padding: 10vh 5vh;
 }
+
+
+#skill>div>.left:hover{
+    background-image: linear-gradient(-130deg , transparent , transparent , transparent , transparent , transparent);
+}
+
 
 
 #skill>div>.left>hr {
@@ -573,6 +585,7 @@ nav a:hover {
     height: 5vh;
     width: 35vh;
     margin: 0 .5vh;
+    filter: drop-shadow(0px 5px 5px grey) contrast(150%) ;
 }
 
 
@@ -586,7 +599,7 @@ nav a:hover {
 
 #projects {
     min-height: 70vh;
-    margin: 10vh 0;
+    margin: 20vh 0;
     padding-top: 10vh;
 
     display: flex;
@@ -608,6 +621,10 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#projects>h2{
+    margin-top: 15vh;
 }
 
 
@@ -811,7 +828,7 @@ nav a:hover {
     position: relative;
 
     border-radius: 3%;
-    transform: translateY(100%);
+    transform: translateY(100px);
     height: 100%;
     width: 100%;
     object-fit: cover;
