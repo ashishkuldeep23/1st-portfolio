@@ -441,9 +441,10 @@ nav a:hover {
 }
 
 
-#about>.bottomIDo>div>img {
-    width: 40vh;
-    border-radius: 10vh;
+#about>.bottomIDo>div>iframe {
+    height: 50vh;
+    width: 45vh;
+    border-radius: 50%;
 }
 
 

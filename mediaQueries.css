@@ -30,6 +30,11 @@
         width: unset;
     }
 
+    #about>.bottomIDo>div>iframe {
+        height: 70vh;
+        width: 65vh;
+    }
+
     #skill {
         height: auto;
     }
@@ -42,7 +47,6 @@
 
     #skill>div>.right {
         display: none;
-        /* margin-left: 0; */
     }
 
     #projects {
@@ -85,7 +89,6 @@
     }
 
     #projects>#project_show {
-
         padding: 13vh 2vh;
         margin: 5vh 0;
     }
@@ -165,6 +168,13 @@
         font-size: 1rem;
     }
 
+    #about>.bottomIDo>div>iframe {
+        height: 50vh;
+        width: 45vh;
+    }
+    
+
+
     #skill>div>.left {
         padding: 5vh 2vh;
     }
@@ -231,6 +241,13 @@
     #about>div>.right>img {
         width: 32vh;
     }
+
+    #about>.bottomIDo>div>iframe {
+        width: 35vh;
+        height: 35vh;
+        border-radius: 50%;
+    }
+    
 
     #skill>div>.left {
         padding: 3vh 1vh;
