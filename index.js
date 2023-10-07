@@ -78,6 +78,9 @@ function changeThemeDark() {
 
         buldDiv.style.backgroundColor = "transparent"
 
+        localStorage.setItem("Ashish_portfolio_dark" , JSON.stringify(isThemeDarkVal))
+
+
     } else {
         // // // Light Code --->
  
@@ -94,12 +97,27 @@ function changeThemeDark() {
 
         buldDiv.style.backgroundColor = "yellow"
 
+        localStorage.setItem("Ashish_portfolio_dark" , JSON.stringify(isThemeDarkVal))
+
     }
 
 
     isThemeDarkVal = !isThemeDarkVal
 
 }
+
+
+// // // reading local host value and set the theme accr. --->
+
+let darkValueInLocalS = localStorage.getItem("Ashish_portfolio_dark")
+if(darkValueInLocalS){
+
+    darkValueInLocalS = JSON.parse(darkValueInLocalS)
+    isThemeDarkVal = darkValueInLocalS
+    changeThemeDark()
+}
+
+
 
 
 
@@ -377,7 +395,7 @@ function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/
     let askToUser = confirm("Do you want to open Link ??")
 
     if(askToUser){
-        window.open(url , "__blank")
+        window.open(url , "_blank")
     }
 }
 
