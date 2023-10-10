@@ -522,9 +522,7 @@ nav a:hover {
     margin: 5vh 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    
+    align-items: center; 
 }
 
 
@@ -544,6 +542,7 @@ nav a:hover {
     /* align-items: baseline; */
     text-transform: capitalize;
     background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan);
+    background-image: linear-gradient(-130deg , transparent , transparent , transparent , transparent , transparent);
 
     transition: all 1s;
 
@@ -552,7 +551,7 @@ nav a:hover {
 
 
 #skill>div>.left:hover{
-    background-image: linear-gradient(-130deg , transparent , transparent , transparent , transparent , transparent);
+    background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan);
 }
 
 
@@ -596,6 +595,10 @@ nav a:hover {
     margin-left: 20vh;
 }
 
+
+#skill>div>.right>img:hover{
+    scale: 1.1;
+}
 
 
 #projects {
@@ -803,6 +806,11 @@ nav a:hover {
 }
 
 
+.see_all_projects > a{
+    color: var(--text) !important;
+    text-shadow: .5px .5px 1px var(--theme);
+}
+
 
 
 /* Some class created of JS */
@@ -850,6 +858,30 @@ nav a:hover {
     border-top-left-radius: 5vh;
     border-top-right-radius: 5vh;
     color: white;
+    position: relative;
+}
+
+
+#contect>img{
+
+    border-radius: 35%;
+
+    width: 10vh;
+
+    position: absolute;
+    top: 10px;
+    left:10px;
+    border: 2px solid cyan;
+    padding: 0.5vh;
+
+    transform: rotate(150deg);
+    transition: 0.5s all;
+}
+
+
+
+#contect>img:hover{
+    transform: rotate(180deg);
 }
 
 
@@ -1045,7 +1077,7 @@ nav a:hover {
 
 .social_icon_hold {
     margin-top: 5vh;
-    width: 70%;
+    width: 90%;
     margin: 2vh auto;
     /* border: 1px solid red; */
     display: flex;
@@ -1055,8 +1087,6 @@ nav a:hover {
 
 
 .social_icon_hold>div {
-
-    /* border: 1px solid; */
 
     display: flex;
     flex-direction: column;
@@ -1068,9 +1098,10 @@ nav a:hover {
 
 .social_icon_hold>div>i {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: relative;
     margin: 0 2vh;
+    z-index: 10;
 }
 
 
@@ -1082,7 +1113,7 @@ nav a:hover {
     left: 50%;
     opacity: 0;
     background-color: var(--theme);
-    border-radius: 2vh;
+    border-radius: 0.5vh;
     height: 2px;
     width: 5px;
     transition: 0.7s all;
@@ -1096,7 +1127,6 @@ nav a:hover {
     opacity: 1;
     width: 100%;
     height: 100%;
-    /* border: 2px solid var(--theme); */
 }
 
 
@@ -1108,7 +1138,6 @@ nav a:hover {
 
 
 #resumeBtn{
-
     width: fit-content;
     margin: 2.5vh 0;
     font-size: 1.5rem;
@@ -1193,4 +1222,18 @@ nav a:hover {
 #goto_top:is(:hover, :active, :focus) {
     transform: scale(2.5);
     color: darkgreen;
+}
+
+
+
+/* This call i sed several places / where ecternal link is given that place */
+
+.goto_link_div i{
+    transition: all .5s;
+}
+
+.goto_link_div:hover i{
+    padding-left: 5px;
+    display: inline-block;
+    transform: rotate(30deg);
 }

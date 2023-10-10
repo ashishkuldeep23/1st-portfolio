@@ -208,6 +208,11 @@
     }
 
 
+    #contect>img{
+  
+        width: 7vh;
+    }
+
     #contect>div>.left {
         width: 90%;
     }
@@ -216,6 +221,10 @@
         width: 90%;
     }
 
+
+    #resumeBtn{
+        font-size: 1rem;
+    }
 
 
     .social_icon_hold {

@@ -18,12 +18,12 @@ window.addEventListener("mousemove", (values) => {
     let y = values.clientY
 
 
-    trackerDiv.style.transform = `translate(${x}px , ${y -90}px)`
+    trackerDiv.style.transform = `translate(${x}px , ${y - 90}px)`
 
 
-    timeOut = setTimeout( ()=>{
+    timeOut = setTimeout(() => {
         trackerDiv.style.visibility = "hidden"
-    } , 250)
+    }, 250)
 
 })
 
@@ -64,7 +64,7 @@ function changeThemeDark() {
 
     if (!isThemeDarkVal) {
         // // // dark Code --->
-  
+
         // // // Some root variable value changing ----> 
         // document.querySelector(":root").setAttribute("--theme") = "#FFB000"
 
@@ -78,12 +78,12 @@ function changeThemeDark() {
 
         buldDiv.style.backgroundColor = "transparent"
 
-        localStorage.setItem("Ashish_portfolio_dark" , JSON.stringify(isThemeDarkVal))
+        localStorage.setItem("Ashish_portfolio_dark", JSON.stringify(isThemeDarkVal))
 
 
     } else {
         // // // Light Code --->
- 
+
         // // // Some root variable value changing ----> 
         // document.querySelector(":root").setAttribute("--theme") = "#FFB000"
 
@@ -97,7 +97,7 @@ function changeThemeDark() {
 
         buldDiv.style.backgroundColor = "yellow"
 
-        localStorage.setItem("Ashish_portfolio_dark" , JSON.stringify(isThemeDarkVal))
+        localStorage.setItem("Ashish_portfolio_dark", JSON.stringify(isThemeDarkVal))
 
     }
 
@@ -110,7 +110,7 @@ function changeThemeDark() {
 // // // reading local host value and set the theme accr. --->
 
 let darkValueInLocalS = localStorage.getItem("Ashish_portfolio_dark")
-if(darkValueInLocalS){
+if (darkValueInLocalS) {
 
     darkValueInLocalS = JSON.parse(darkValueInLocalS)
     isThemeDarkVal = darkValueInLocalS
@@ -201,7 +201,7 @@ function textAnimationCode() {
 
     function consoleText(words, id, colors = ["red"]) {
         // if (colors === undefined) colors = ['red'];
-        
+
         // var con = document.getElementById('console');
         var letterCount = 1;
         var x = 1;
@@ -400,17 +400,27 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 // Fn to open Project link or Any link ------>
 
-function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png"){
+function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png") {
 
     let askToUser = confirm("Do you want to open Link ??")
 
-    if(askToUser){
-        window.open(url , "_blank")
+    if (askToUser) {
+        window.open(url, "_blank")
     }
 }
 
 // openThisUrlNow()
 
+
+
+// // // Onclick handler of a tag of description of projects ---->
+
+// // // This Fn is used to stopPropagation() when user click BTN of discription , don't show full website immidiatly.
+function onClicKAtagHnadler(event) {
+    // console.log(event)
+    // alert("CK")
+    event.stopPropagation()
+}
 
 
 
