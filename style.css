@@ -876,6 +876,7 @@ nav a:hover {
 
     transform: rotate(150deg);
     transition: 0.5s all;
+
 }
 
 
@@ -1060,29 +1061,47 @@ nav a:hover {
 
     display: flex;
     flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: end;
 
 }
 
 #contect>div>.right>h3{
+    text-decoration: underline;
     color: cyan;
     margin-top: 3vh;
     margin-bottom: 1vh;
 }
 
 
+#contect>div>.right p{
+    text-align: end;
+}
+
 #contect>div>.right>ul{
     list-style: none;
+    text-align: end;
 }
 
 
 .social_icon_hold {
     margin-top: 5vh;
-    width: 90%;
-    margin: 2vh auto;
-    /* border: 1px solid red; */
+    width: 70%;
+    margin: 2vh 0;
+    border: 1px solid cyan;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 2vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    transition: 1s all;
+}
+
+
+
+.social_icon_hold:hover{
+    box-shadow: 2px 2px 2px yellow;
 }
 
 
@@ -1092,8 +1111,14 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     margin: 2vh 0;
-
 }
+
+
+.social_icon_hold>div:hover span {
+    color: cyan;
+}
+
+
 
 
 .social_icon_hold>div>i {
@@ -1112,8 +1137,9 @@ nav a:hover {
     top: 50%;
     left: 50%;
     opacity: 0;
-    background-color: var(--theme);
-    border-radius: 0.5vh;
+    /* background-color: var(--theme); */
+    border: 2px solid transparent;
+    border-radius: 1vh;
     height: 2px;
     width: 5px;
     transition: 0.7s all;
@@ -1121,7 +1147,8 @@ nav a:hover {
 }
 
 .social_icon_hold i:hover::after {
-    background-color: cyan;
+    /* background-color: cyan; */
+    border: 2px solid cyan;
     top: 0;
     left: 0;
     opacity: 1;
@@ -1133,8 +1160,8 @@ nav a:hover {
 .social_icon_hold>div span {
     font-size: 1rem;
     margin: 0.5vh;
+    transition: 0.7s all;
 }
-
 
 
 #resumeBtn{
