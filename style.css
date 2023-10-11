@@ -263,11 +263,13 @@ nav>#show_menu_btn {
 
 
 nav>ul {
-    width: 50vh;
+    width: 70vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
     
     border: 1px solid white;
+
+    box-shadow: 2px 2px 10px cyan;
     padding: 1vh 2vh;
     border-radius: 100px;
     display: flex;
@@ -283,7 +285,7 @@ nav>ul {
 /* This div present to show scoll value as width */
 #scrool_percent {
     background-color: #17c5c8;
-    height: 2px;
+    height: 4px;
     /* width: 100%; */
 
     position: absolute;
@@ -1137,7 +1139,6 @@ nav a:hover {
     top: 50%;
     left: 50%;
     opacity: 0;
-    /* background-color: var(--theme); */
     border: 2px solid transparent;
     border-radius: 1vh;
     height: 2px;
@@ -1147,7 +1148,6 @@ nav a:hover {
 }
 
 .social_icon_hold i:hover::after {
-    /* background-color: cyan; */
     border: 2px solid cyan;
     top: 0;
     left: 0;
