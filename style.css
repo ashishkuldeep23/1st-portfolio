@@ -253,7 +253,7 @@ nav>#show_menu_btn {
     display: none;
 
     background-color: cyan;
-    border-radius: 0.5vh ;
+    border-radius: 0.5vh;
     padding: 0 1vh;
     font-weight: bold;
 
@@ -266,7 +266,7 @@ nav>ul {
     width: 70vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
-    
+
     border: 1px solid white;
 
     box-shadow: 2px 2px 10px cyan;
@@ -276,7 +276,7 @@ nav>ul {
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
-    
+
     position: relative;
     overflow: hidden;
 }
@@ -322,6 +322,39 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+
+/* Some nav bar classes used when device is shown in mobile  */
+
+/* Below two classes used in js for styling purpose. */
+
+.for_ul_of_nav {
+    width: 25vh;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.for_li_of_ul_of_nav {
+    border-radius: inherit !important;
+    height: 20%;
+    width: 100%;
+}
+
+.for_li_of_ul_of_nav a{
+    font-size: 2rem;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 
@@ -524,7 +557,7 @@ nav a:hover {
     margin: 5vh 0;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 
@@ -543,8 +576,8 @@ nav a:hover {
     flex-direction: column;
     /* align-items: baseline; */
     text-transform: capitalize;
-    background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan);
-    background-image: linear-gradient(-130deg , transparent , transparent , transparent , transparent , transparent);
+    /* background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan); */
+    background-image: linear-gradient(-130deg, transparent, transparent, transparent, transparent, transparent);
 
     transition: all 1s;
 
@@ -552,8 +585,8 @@ nav a:hover {
 }
 
 
-#skill>div>.left:hover{
-    background-image: linear-gradient(-130deg ,  transparent , transparent , transparent , transparent , transparent , cyan);
+#skill>div>.left:hover {
+    background-image: linear-gradient(-130deg, transparent, transparent, transparent, transparent, transparent, cyan);
 }
 
 
@@ -587,7 +620,7 @@ nav a:hover {
     height: 5vh;
     width: 35vh;
     margin: 0 .5vh;
-    filter: drop-shadow(0px 5px 5px grey) contrast(150%) ;
+    filter: drop-shadow(0px 5px 5px grey) contrast(150%);
 }
 
 
@@ -598,7 +631,7 @@ nav a:hover {
 }
 
 
-#skill>div>.right>img:hover{
+#skill>div>.right>img:hover {
     scale: 1.1;
 }
 
@@ -629,7 +662,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-#projects>h2{
+#projects>h2 {
     margin-top: 15vh;
 }
 
@@ -702,7 +735,7 @@ nav a:hover {
 
 
 .project_card>h3 {
-    
+
     background-color: #000000;
     color: #00ffff;
     text-decoration: underline;
@@ -734,13 +767,13 @@ nav a:hover {
 }
 
 
-.project_detail_hidden h4{
+.project_detail_hidden h4 {
     text-decoration: underline;
 }
 
 
 
-.project_detail_hidden a{
+.project_detail_hidden a {
     padding: 0 1vh;
     margin: 0.5vh;
     border-radius: 0.5vh;
@@ -752,7 +785,7 @@ nav a:hover {
 }
 
 
-.project_detail_hidden a:hover{
+.project_detail_hidden a:hover {
     background-color: red;
 }
 
@@ -808,7 +841,7 @@ nav a:hover {
 }
 
 
-.see_all_projects > a{
+.see_all_projects>a {
     color: var(--text) !important;
     text-shadow: .5px .5px 1px var(--theme);
 }
@@ -864,7 +897,7 @@ nav a:hover {
 }
 
 
-#contect>img{
+#contect>img {
 
     border-radius: 35%;
 
@@ -872,7 +905,7 @@ nav a:hover {
 
     position: absolute;
     top: 10px;
-    left:10px;
+    left: 10px;
     border: 2px solid cyan;
     padding: 0.5vh;
 
@@ -883,7 +916,7 @@ nav a:hover {
 
 
 
-#contect>img:hover{
+#contect>img:hover {
     transform: rotate(180deg);
 }
 
@@ -1003,7 +1036,7 @@ nav a:hover {
 }
 
 #contect_form>textarea {
-    
+
     background-color: transparent;
     border: 0;
     border-bottom: 2px solid cyan;
@@ -1068,7 +1101,7 @@ nav a:hover {
 
 }
 
-#contect>div>.right>h3{
+#contect>div>.right>h3 {
     text-decoration: underline;
     color: cyan;
     margin-top: 3vh;
@@ -1076,11 +1109,11 @@ nav a:hover {
 }
 
 
-#contect>div>.right p{
+#contect>div>.right p {
     text-align: end;
 }
 
-#contect>div>.right>ul{
+#contect>div>.right>ul {
     list-style: none;
     text-align: end;
 }
@@ -1102,7 +1135,7 @@ nav a:hover {
 
 
 
-.social_icon_hold:hover{
+.social_icon_hold:hover {
     box-shadow: 2px 2px 2px yellow;
 }
 
@@ -1164,7 +1197,7 @@ nav a:hover {
 }
 
 
-#resumeBtn{
+#resumeBtn {
     width: fit-content;
     margin: 2.5vh 0;
     font-size: 1.5rem;
@@ -1177,7 +1210,7 @@ nav a:hover {
 }
 
 
-#resumeBtn:hover{
+#resumeBtn:hover {
     background-color: cyan;
     color: black;
     cursor: pointer;
@@ -1234,7 +1267,7 @@ nav a:hover {
     left: 95%;
     top: 90%;
 
-    filter: drop-shadow(1px  1px 2px white);
+    filter: drop-shadow(1px 1px 2px white);
 
     color: var(--theme);
     transform: scale(3);
@@ -1255,11 +1288,11 @@ nav a:hover {
 
 /* This call i sed several places / where ecternal link is given that place */
 
-.goto_link_div i{
+.goto_link_div i {
     transition: all .5s;
 }
 
-.goto_link_div:hover i{
+.goto_link_div:hover i {
     padding-left: 5px;
     display: inline-block;
     transform: rotate(30deg);

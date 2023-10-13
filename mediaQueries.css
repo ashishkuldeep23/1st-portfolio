@@ -140,12 +140,11 @@
     nav>ul {
         height: 3px;
         /* height: max-content; */
+        width: 25vh;
 
         display: block;
-        width: fit-content;
         border: 0px;
         backdrop-filter: blur(20px) saturate(1.7);
-
         border-radius: 0;
         margin: 0;
         font-size: 1.3rem;

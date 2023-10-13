@@ -132,16 +132,28 @@ function showMenuBtn() {
 
     let ulOfNavTag = document.querySelector("nav>ul")
 
+    let liOfUlOfNavTag = document.querySelectorAll("nav>ul li")
+
     if (!menuBtnClicked) {
 
-        ulOfNavTag.style.height = "fit-content"
+        // ulOfNavTag.style.height = "fit-content"
+
+
+        ulOfNavTag.classList.add("for_ul_of_nav")
+        liOfUlOfNavTag.forEach( (ele)=>{ ele.classList.add("for_li_of_ul_of_nav") } )
+
 
         document.querySelector("nav>button").innerHTML = "X"
         document.querySelector("nav>button").style.padding = "0 2vh"
         document.querySelector("nav>button").style.backgroundColor = "red"
         document.querySelector("nav>button").style.color = "#fff"
     } else {
-        ulOfNavTag.style.height = "3px"
+        // ulOfNavTag.style.height = "3px"
+
+        ulOfNavTag.classList.remove("for_ul_of_nav")
+        liOfUlOfNavTag.forEach( (ele)=>{ ele.classList.remove("for_li_of_ul_of_nav") } )
+
+
         document.querySelector("nav>button").innerHTML = "Menu"
         document.querySelector("nav>button").style.padding = "0 1vh"
         document.querySelector("nav>button").style.backgroundColor = "cyan"
