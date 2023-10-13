@@ -990,6 +990,7 @@ nav a:hover {
 .contect_div>.inner>.form_div {
     text-align: start;
     padding: 1.5vh 1vh;
+    padding-bottom: 0;
     width: 100%;
     border-radius: 2vh;
 
@@ -1056,18 +1057,18 @@ nav a:hover {
 #contect_form>.button {
     /* background-color: blue;
     color: #fff; */
-    color: darkcyan;
+    color: cyan;
     font-weight: bolder;
-    margin: 1vh 0;
     margin-left: auto;
-    margin-right: 2vh;
+    margin-top: revert;
+    margin-bottom: 0;
     width: fit-content;
     font-size: 1.3rem;
     padding: 0.5vh;
     border-radius: 0.5vh;
-    border: 1px solid;
+    border: 2px solid;
     letter-spacing: 3px;
-    box-shadow: 4px 4px 3px cyan;
+    box-shadow: -4px -4px 3px cyan;
     transition: all .7s ease;
 
 }
@@ -1076,8 +1077,9 @@ nav a:hover {
     /* background-color: green;
     color: #fff; */
 
-    border: 1px solid darkcyan;
-    box-shadow: -4px 4px 3px cyan;
+    border: 2px solid darkcyan;
+    box-shadow: 4px 4px 3px cyan;
+    color: darkcyan;
 }
 
 #contect_form>.button:active {
@@ -1152,7 +1154,6 @@ nav a:hover {
 .social_icon_hold>div:hover span {
     color: cyan;
 }
-
 
 
 
