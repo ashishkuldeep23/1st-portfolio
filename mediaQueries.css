@@ -52,10 +52,10 @@
     }
 
     #projects {
-        margin:  0;
+        margin: 0;
     }
 
-    #projects>h2{
+    #projects>h2 {
         margin-top: 0vh;
     }
 
@@ -101,7 +101,7 @@
     }
 
 
-    
+
     .careted_div_by_js {
         height: 200px;
         width: 150px;
@@ -153,11 +153,10 @@
     }
 
 
-    nav>ul>li{
+    nav>ul>li {
         /* visibility: hidden; */
         display: none;
     }
-
 
 }
 
@@ -176,7 +175,7 @@
     }
 
 
-    #about>div p{
+    #about>div p {
         font-size: 1rem;
     }
 
@@ -184,7 +183,7 @@
         height: 50vh;
         width: 45vh;
     }
-    
+
 
 
     #skill>div>.left {
@@ -220,8 +219,8 @@
     }
 
 
-    #contect>img{
-  
+    #contect>img {
+
         width: 7vh;
     }
 
@@ -234,7 +233,7 @@
     }
 
 
-    #resumeBtn{
+    #resumeBtn {
         font-size: 1rem;
     }
 
@@ -268,7 +267,7 @@
         height: 35vh;
         border-radius: 50%;
     }
-    
+
 
     #skill>div>.left {
         padding: 3vh 1vh;
