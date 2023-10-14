@@ -1,3 +1,10 @@
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz@6..96&family=Handlee&family=Kosugi+Maru&family=Open+Sans&display=swap');
+
+
+
 :root {
     /* --theme: #FFB000; */
     --theme: #00008b;
@@ -11,6 +18,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     transition: all 0.2s;
+    /* font-family: fangsong; */
+    font-family: system-ui;
+    /* font-family: 'Open Sans', sans-serif; */
 }
 
 
@@ -60,11 +70,13 @@ hr {
 }
 
 
+/* This used in margin top also of first intro div.  */
+
 h1 {
     font-size: 4rem;
     text-align: center;
     color: var(--theme);
-    margin-top: 10vh;
+    margin-top: 12vh;
 }
 
 
@@ -241,7 +253,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 1vh;
     width: 100%;
     position: fixed;
     top: 5px;
@@ -264,6 +276,7 @@ nav>#show_menu_btn {
 
 nav>ul {
     width: 70vh;
+    height: 9vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
 
@@ -276,6 +289,7 @@ nav>ul {
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
+    align-items: center;
 
     position: relative;
     overflow: hidden;
@@ -313,10 +327,9 @@ nav>ul>li:is(:hover, :active) {
 
 nav a {
     text-decoration: none;
-    /* color: black; */
-    /* color: darkmagenta; */
     color: #17c5c8;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -817,8 +830,9 @@ nav a:hover {
 /* main and Big Heading for hover */
 
 #project_show>h2 {
+    font-family: cursive;
     font-size: 10rem;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: white;
     background-image: url("https://images.unsplash.com/photo-1619005434452-92e854f14fea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sb3JmdWxsfGVufDB8fDB8fHww&w=1000&q=80");
     background-repeat: repeat;
