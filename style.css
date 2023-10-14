@@ -31,9 +31,9 @@
 
 *::-webkit-scrollbar-track {
     width: 7px;
-    background: rgb(238, 174, 202);
     /* background: linear-gradient(0deg, #aeeebccc 30%, #94e9dedb 49%); */
-    background: black;
+
+    background-color: transparent;
 }
 
 
@@ -283,7 +283,7 @@ nav>ul {
     border: 1px solid white;
 
     box-shadow: 2px 2px 10px cyan;
-    padding: 1vh 2vh;
+    padding: 0vh 2vh;
     border-radius: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +311,7 @@ nav>ul {
 
 
 nav>ul>li {
+    height: 100%;
     transition: .3s all;
     padding: 0 0.5vh;
     border: 2px solid transparent;
@@ -319,13 +320,18 @@ nav>ul>li {
 
 nav>ul>li:is(:hover, :active) {
     border: 2px solid #89e5ff;
-    border-radius: 100px;
+    border-radius: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
     font-weight: bold;
 }
 
 
 nav a {
+    height: 100%;
+
+    display: flex;
+    place-items: center;
+
     text-decoration: none;
     color: #17c5c8;
     font-size: 1.5rem;
@@ -634,7 +640,69 @@ nav a:hover {
     width: 35vh;
     margin: 0 .5vh;
     filter: drop-shadow(0px 5px 5px grey) contrast(150%);
+    /* filter: hue-rotate(101deg); */
 }
+
+
+/* Going to change color of by filter  starts */
+
+#skill>div>.left>div:nth-child(1) >progress{
+    filter: hue-rotate(70deg);
+}
+
+#skill>div>.left>div:nth-child(2) >progress{
+    filter: hue-rotate(95deg);
+}
+
+#skill>div>.left>div:nth-child(3) >progress{
+    filter: hue-rotate(115deg);
+}
+
+#skill>div>.left>div:nth-child(4) >progress{
+    filter: hue-rotate(135deg);
+}
+
+#skill>div>.left>div:nth-child(5) >progress{
+    filter: hue-rotate(155deg);
+}
+
+#skill>div>.left>div:nth-child(6) >progress{
+    filter: hue-rotate(175deg);
+}
+
+#skill>div>.left>div:nth-child(7) >progress{
+    filter: hue-rotate(195deg);
+}
+
+#skill>div>.left>div:nth-child(8) >progress{
+    filter: hue-rotate(215deg);
+}
+
+#skill>div>.left>div:nth-child(9) >progress{
+    filter: hue-rotate(235deg);
+}
+
+#skill>div>.left>div:nth-child(10) >progress{
+    filter: hue-rotate(255deg);
+}
+
+#skill>div>.left>div:nth-child(11) >progress{
+    filter: hue-rotate(275deg);
+}
+
+#skill>div>.left>div:nth-child(12) >progress{
+    filter: hue-rotate(305deg);
+}
+
+#skill>div>.left>div:nth-child(13) >progress{
+    filter: hue-rotate(335deg);
+}
+
+
+
+/* Going to change color of by filter  Ends */
+
+
 
 
 
@@ -727,6 +795,7 @@ nav a:hover {
 #projects .project_card:hover {
     box-shadow: 0px 0px 5px #808080;
     transform: rotate(0deg) scale(0.97);
+    cursor: pointer;
 }
 
 
@@ -780,6 +849,21 @@ nav a:hover {
 }
 
 
+
+.project_card:hover>.project_detail_hidden {
+    /* top: initial; */
+    bottom: 0;
+    cursor: pointer;
+}
+
+
+.project_card>.project_detail_hidden:hover {
+    /* top: initial; */
+    bottom: 0;
+}
+
+
+
 .project_detail_hidden h4 {
     text-decoration: underline;
 }
@@ -801,15 +885,6 @@ nav a:hover {
 .project_detail_hidden a:hover {
     background-color: red;
 }
-
-
-
-.project_card:hover>div {
-    /* top: initial; */
-    bottom: 0;
-}
-
-
 
 
 
@@ -914,9 +989,7 @@ nav a:hover {
 #contect>img {
 
     border-radius: 35%;
-
     width: 10vh;
-
     position: absolute;
     top: 10px;
     left: 10px;

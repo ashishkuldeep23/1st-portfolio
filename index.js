@@ -18,7 +18,7 @@ window.addEventListener("mousemove", (values) => {
     let y = values.clientY
 
 
-    trackerDiv.style.transform = `translate(${x}px , ${y - 90}px)`
+    trackerDiv.style.transform = `translate(${x}px , ${y - 102}px)`
 
 
     timeOut = setTimeout(() => {

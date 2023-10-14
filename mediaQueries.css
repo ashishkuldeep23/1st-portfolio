@@ -23,11 +23,13 @@
     #about>.bottomIDo {
         align-items: center;
         flex-direction: column;
+        margin: 0;
     }
 
 
     #about>.bottomIDo>div {
         width: unset;
+        margin: 0;
     }
 
     #about>.bottomIDo>div>iframe {
