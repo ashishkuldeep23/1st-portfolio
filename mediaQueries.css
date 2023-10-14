@@ -120,11 +120,9 @@
 }
 
 
+/* Mobile menu style applied from here (This breaKPOINT used for that.) */
 
-
-
-@media (max-width : 440px) {
-
+@media (max-width : 571px) {
     nav {
         justify-content: center;
         align-items: end;
@@ -138,11 +136,11 @@
         margin: 0 1.5vh;
     }
 
-
     nav>ul {
         height: 3px;
         /* height: max-content; */
         width: 25vh;
+        box-shadow: unset;
 
         display: block;
         border: 0px;
@@ -154,6 +152,19 @@
         padding: 0;
     }
 
+
+    nav>ul>li{
+        /* visibility: hidden; */
+        display: none;
+    }
+
+
+}
+
+
+
+
+@media (max-width : 440px) {
 
     #change_content_parent {
         font-size: 1rem;

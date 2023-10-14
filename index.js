@@ -412,9 +412,9 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 // Fn to open Project link or Any link ------>
 
-function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png") {
+function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png" , alertMSg = "this") {
 
-    let askToUser = confirm("Do you want to open Link ??")
+    let askToUser = confirm(`Do you want to open ${alertMSg} Link  ??`)
 
     if (askToUser) {
         window.open(url, "_blank")
