@@ -396,11 +396,9 @@ nav a:hover {
 
 
 #change_content {
-    color: red;
     margin-left: 7px;
     border-right: 3px solid;
-
-
+    text-decoration: underline;
     overflow: hidden;
     /* width: 20ch; */
     /* animation: typing 4s infinite steps(20); */
