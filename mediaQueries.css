@@ -86,6 +86,11 @@
         width: 98%;
     }
 
+
+    #about>.bottomIDo>div:last-child {
+        width: 80%;
+    }
+
     #projects>div {
         width: 98%;
     }
@@ -169,6 +174,9 @@
         font-size: 1rem;
     }
 
+    #about>.bottomIDo>div:last-child {
+        width: 95%;
+    }
 
     #about>.bottomIDo .icon_hold {
         width: 98%;

@@ -5,8 +5,6 @@ AOS.init();
 
 
 
-AOS.init();
-
 // You can also pass an optional settings object
 // below listed default settings
 // AOS.init({
@@ -35,10 +33,10 @@ AOS.init();
 
 
 
-document.addEventListener('aos:in', ({ detail }) => {
-    // console.log('animated in', detail);
-});
+// document.addEventListener('aos:in', ({ detail }) => {
+//     // console.log('animated in', detail);
+// });
 
-document.addEventListener('aos:out', ({ detail }) => {
-    // console.log('animated out', detail);
-});
+// document.addEventListener('aos:out', ({ detail }) => {
+//     // console.log('animated out', detail);
+// });
