@@ -19,6 +19,10 @@
         flex-direction: column-reverse;
     }
 
+    #about>div>.left {
+        width: auto;
+        margin-top: 5vh;
+    }
 
     #about>.bottomIDo {
         align-items: center;
@@ -144,7 +148,7 @@
     nav>ul {
         height: 3px;
         /* height: max-content; */
-        width: 25vh;
+        width: 35vh;
         box-shadow: unset;
 
         display: block;
@@ -161,6 +165,14 @@
     nav>ul>li {
         /* visibility: hidden; */
         display: none;
+    }
+
+    nav>ul>#resumeInNav{
+        background-color: #17c5c8 !important;
+        color: white ;
+        border-radius: 2vh;
+        margin-right: 0vh;
+        padding-right: 0vh;
     }
 
 }

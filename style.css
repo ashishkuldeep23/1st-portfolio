@@ -178,7 +178,7 @@ h1 {
 
 
 
-/* Animation for dark mode div or toggel btn -->💡 */
+/* Dark mode btn Animation div or toggel btn -->💡 */
 
 @keyframes dark_div_ani {
 
@@ -271,9 +271,24 @@ nav>#show_menu_btn {
 }
 
 
+/* This div present to show scoll value as width visual only */
+#scrool_percent {
+    background-color: #17c5c8;
+    height: 4px;
+    /* width: 100%; */
+    border: 1px solid var(--theme);
+    border-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+}
+
+
+
 
 nav>ul {
-    width: 70vh;
+    width: 80vh;
     height: 9vh;
     margin: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
@@ -294,20 +309,6 @@ nav>ul {
 }
 
 
-/* This div present to show scoll value as width */
-#scrool_percent {
-    background-color: #17c5c8;
-    height: 4px;
-    /* width: 100%; */
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 100px;
-}
-
-
-
 nav>ul>li {
     height: 100%;
     transition: .3s all;
@@ -317,10 +318,27 @@ nav>ul>li {
 }
 
 nav>ul>li:is(:hover, :active) {
-    border: 2px solid #89e5ff;
+    border: 2px solid cyan;
     border-radius: 2vh;
     backdrop-filter: blur(20px) saturate(1.7);
     font-weight: bold;
+}
+
+nav>ul>#resumeInNav{
+    background-color: #17c5c8 ;
+    color: white ;
+    border-radius: 2vh;
+    margin-right: -2vh;
+    padding-right: 2vh;
+}
+
+
+nav>ul>#resumeInNav:is(:hover, :active) {
+    border: 2px solid #17c5c8;
+}
+
+nav>ul>#resumeInNav>a{
+    color: white;
 }
 
 
@@ -346,7 +364,7 @@ nav a:hover {
 /* Below two classes used in js for styling purpose. */
 
 .for_ul_of_nav {
-    width: 25vh;
+    width: 35vh;
     height: 85dvh;
     display: flex;
     flex-direction: column;
@@ -418,15 +436,22 @@ nav a:hover {
 
 
 #about>div>.left {
+    width: 35%;
     border-left: 1px solid;
     border-radius: 1vh;
-    padding-left: 2vh;
-    height: 37vh;
+    padding: 2vh 0;
+    padding-left: 2vh;   
     margin: 2vh;
+    text-align: start;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+
+
+
+#about>div>.left>h3 {
+    text-align: center;
 }
 
 
@@ -688,6 +713,8 @@ nav a:hover {
 
 /* Going to change color of by filter  starts */
 
+/* Below is not used now ---> */
+
 #skill>div>.left>div:nth-child(1)>progress {
     filter: hue-rotate(70deg);
 }
@@ -845,7 +872,7 @@ nav a:hover {
     content: "";
     height: 3px;
     width: 0%;
-    background-color: cyan;
+    background-color: var(--theme);
     position: absolute;
     left: 0;
     bottom: 0px;
