@@ -2,329 +2,282 @@
 
 /* Till now done 03/10 */
 
-@media (max-width : 1054px) {}
-
-
-
-
-@media (max-width : 847px) {
-
-
-    #change_content_parent {
-        font-size: 2rem;
-    }
-
-
-    #about>div {
-        flex-direction: column-reverse;
-    }
-
-    #about>div>.left {
-        width: auto;
-        margin-top: 5vh;
-    }
-
-    #about>.bottomIDo {
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-    }
-
-
-    #about>.bottomIDo>div {
-        width: unset;
-        margin: 0;
-    }
-
-    #about>.bottomIDo>div>iframe {
-        height: 70vh;
-        width: 65vh;
-    }
-
-    #skill {
-        height: auto;
-    }
-
-
-    #skill>div:last-child {
-        flex-direction: column;
-    }
-
-
-    #skill>div>.right {
-        display: none;
-    }
-
-    #projects {
-        margin: 0;
-    }
-
-    #projects>h2 {
-        margin-top: 0vh;
-    }
-
-    #contect>#contect_main_content {
-        flex-direction: column;
-    }
-
-
-    #goto_top {
-        left: 85%;
-    }
-
+@media (max-width: 1054px) {
 }
 
+@media (max-width: 847px) {
+  #change_content_parent {
+    font-size: 2rem;
+  }
 
+  #about > div {
+    flex-direction: column-reverse;
+  }
 
+  #about > div > .left {
+    width: auto;
+    margin-top: 5vh;
+  }
 
+  #about > .bottomIDo {
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
 
-@media (max-width : 723px) {
+  #about > .bottomIDo > div {
+    width: unset;
+    margin: 0;
+  }
 
+  #about > .bottomIDo > div > iframe {
+    height: 70vh;
+    width: 65vh;
+  }
 
-    #change_content_parent {
-        font-size: 1.7rem;
-    }
+  #skill {
+    height: auto;
+  }
 
+  #skill > div:last-child {
+    flex-direction: column;
+  }
 
-    #about>.bottomIDo>div {
-        width: 98%;
-    }
+  #skill > div > .right {
+    display: none;
+  }
 
+  #projects {
+    margin: 0;
+  }
 
-    #about>.bottomIDo>div:last-child {
-        width: 80%;
-    }
+  #projects > h2 {
+    margin-top: 0vh;
+  }
 
-    #projects>div {
-        width: 98%;
-    }
+  #contect > #contect_main_content {
+    flex-direction: column;
+  }
 
-    #projects>#project_show {
-        padding: 13vh 2vh;
-        margin: 5vh 0;
-    }
-
-    #project_show>h2 {
-        font-size: 6.5rem;
-        letter-spacing: 3px;
-    }
-
-
-
-    .careted_div_by_js {
-        height: 200px;
-        width: 150px;
-    }
-
-
-    #contect>div>.left {
-        width: 75%;
-    }
-
-    #contect>div>.right {
-        width: 75%;
-    }
-
-
+  #goto_top {
+    left: 85%;
+  }
 }
 
+@media (max-width: 723px) {
+  #change_content_parent {
+    font-size: 1.7rem;
+  }
+
+  #about > .bottomIDo > div {
+    width: 98%;
+  }
+
+  #about > .bottomIDo > div:last-child {
+    width: 80%;
+  }
+
+  #projects > div {
+    width: 98%;
+  }
+
+  #projects > #project_show {
+    padding: 13vh 2vh;
+    margin: 5vh 0;
+  }
+
+  #project_show > h2 {
+    font-size: 6.5rem;
+    letter-spacing: 3px;
+  }
+
+  .careted_div_by_js {
+    height: 200px;
+    width: 150px;
+  }
+
+  #contect > div > .left {
+    width: 75%;
+  }
+
+  #contect > div > .right {
+    width: 75%;
+  }
+}
 
 /* Mobile menu style applied from here (This breaKPOINT used for that.) */
 
-@media (max-width : 571px) {
-    nav {
-        justify-content: center;
-        align-items: end;
-        flex-direction: column;
-        padding: 1vh 0;
-        height: fit-content;
-    }
+@media (max-width: 571px) {
+  #scrool_percent {
+    border-radius: 0px;
+    top: 0px;
+    bottom: auto;
+  }
 
-    nav>#show_menu_btn {
-        display: block;
-        margin: 0 1.5vh;
-    }
+  nav {
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding: 1vh 0;
+    height: fit-content;
+  }
 
-    nav>ul {
-        height: 3px;
-        /* height: max-content; */
-        width: 35vh;
-        box-shadow: unset;
+  nav > #show_menu_btn {
+    display: block;
+    margin: 0 1.5vh;
+  }
 
-        display: block;
-        border: 0px;
-        backdrop-filter: blur(20px) saturate(1.7);
-        border-radius: 0;
-        margin: 0;
-        font-size: 1.3rem;
-        border-radius: 2vh;
-        padding: 0;
-    }
+  nav > ul {
+    height: 0px;
+    /* height: max-content; */
+    width: 35vh;
+    box-shadow: unset;
 
+    display: block;
+    border: 0px;
+    backdrop-filter: blur(20px) saturate(1.7);
+    border-radius: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    border-radius: 2vh;
+    padding: 0;
+  }
 
-    nav>ul>li {
-        /* visibility: hidden; */
-        display: none;
-    }
+  nav > ul > li {
+    /* visibility: hidden; */
+    display: none;
+  }
 
-    nav>ul>#resumeInNav{
-        background-color: #17c5c8 !important;
-        color: white ;
-        border-radius: 2vh;
-        margin-right: 0vh;
-        padding-right: 0vh;
-    }
-
+  nav > ul > #resumeInNav {
+    background-color: #17c5c8 !important;
+    color: white;
+    border-radius: 2vh;
+    margin-right: 0vh;
+    padding-right: 0vh;
+  }
 }
 
+@media (max-width: 440px) {
+  #change_content_parent {
+    font-size: 1rem;
+  }
 
+  #about > .bottomIDo > div:last-child {
+    width: 95%;
+  }
 
+  #about > .bottomIDo .icon_hold {
+    width: 98%;
+  }
 
-@media (max-width : 440px) {
+  #about > div p {
+    font-size: 1rem;
+  }
 
-    #change_content_parent {
-        font-size: 1rem;
-    }
+  #about > .bottomIDo > div > iframe {
+    height: 50vh;
+    width: 45vh;
+  }
 
-    #about>.bottomIDo>div:last-child {
-        width: 95%;
-    }
+  #skill > div > .left {
+    padding: 5vh 2vh;
+  }
 
-    #about>.bottomIDo .icon_hold {
-        width: 98%;
-    }
+  #skill > div > .left > div > progress {
+    width: 20vh;
+  }
 
+  #projects > div {
+    padding: 7vh 2vh;
+  }
 
-    #about>div p {
-        font-size: 1rem;
-    }
+  #projects > #project_show {
+    padding: 15vh 2vh;
+    margin: 5vh 0;
+  }
 
-    #about>.bottomIDo>div>iframe {
-        height: 50vh;
-        width: 45vh;
-    }
+  #project_show > h2 {
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+  }
 
+  .careted_div_by_js {
+    height: 180px;
+    width: 130px;
+  }
 
+  #contect > img {
+    width: 7vh;
+  }
 
-    #skill>div>.left {
-        padding: 5vh 2vh;
-    }
+  #contect > div > .left {
+    width: 90%;
+  }
 
-    #skill>div>.left>div>progress {
-        width: 20vh;
-    }
+  #contect > div > .right {
+    width: 90%;
+  }
 
+  #resumeBtn {
+    font-size: 1rem;
+  }
 
-    #projects>div {
-        padding: 7vh 2vh;
-    }
-
-
-    #projects>#project_show {
-
-        padding: 15vh 2vh;
-        margin: 5vh 0;
-    }
-
-
-    #project_show>h2 {
-        font-size: 4.5rem;
-        letter-spacing: 1px;
-    }
-
-
-    .careted_div_by_js {
-        height: 180px;
-        width: 130px;
-    }
-
-
-    #contect>img {
-
-        width: 7vh;
-    }
-
-    #contect>div>.left {
-        width: 90%;
-    }
-
-    #contect>div>.right {
-        width: 90%;
-    }
-
-
-    #resumeBtn {
-        font-size: 1rem;
-    }
-
-
-    .social_icon_hold {
-        width: 100%;
-    }
-
-
-
+  .social_icon_hold {
+    width: 100%;
+  }
 }
 
+@media (max-width: 283px) {
+  #change_content_parent {
+    font-size: 0.7rem;
+  }
 
-@media (max-width : 283px) {
+  #about > div > .right {
+    height: 30vh;
+    width: 30vh;
+  }
 
-    #change_content_parent {
-        font-size: .7rem;
-    }
+  #about > div > .right > img {
+    width: 32vh;
+  }
 
-    #about>div>.right {
-        height: 30vh;
-        width: 30vh;
-    }
+  #about > .bottomIDo > div > iframe {
+    width: 35vh;
+    height: 35vh;
+    border-radius: 50%;
+  }
 
-    #about>div>.right>img {
-        width: 32vh;
-    }
+  #skill > div > .left {
+    padding: 3vh 1vh;
+  }
 
-    #about>.bottomIDo>div>iframe {
-        width: 35vh;
-        height: 35vh;
-        border-radius: 50%;
-    }
+  #skill > div > .left > div > progress {
+    width: 15vh;
+  }
 
+  #project_show > h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
 
-    #skill>div>.left {
-        padding: 3vh 1vh;
-    }
+  .careted_div_by_js {
+    height: 160px;
+    width: 110px;
+  }
 
-    #skill>div>.left>div>progress {
-        width: 15vh;
-    }
+  #contect > div > .left {
+    width: 100%;
+  }
 
-    #project_show>h2 {
-        font-size: 3rem;
-        letter-spacing: 1px;
-    }
+  #contect > div > .right {
+    width: 100%;
+  }
 
-    .careted_div_by_js {
-        height: 160px;
-        width: 110px;
-    }
+  .social_icon_hold {
+    width: 100%;
+  }
 
-
-    #contect>div>.left {
-        width: 100%;
-    }
-
-    #contect>div>.right {
-        width: 100%;
-    }
-
-
-
-    .social_icon_hold {
-        width: 100%;
-    }
-
-
-
-    #goto_top {
-        left: 75%;
-    }
+  #goto_top {
+    left: 75%;
+  }
 }
