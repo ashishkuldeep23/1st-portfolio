@@ -140,24 +140,24 @@ function showMenuBtn() {
 
 
         ulOfNavTag.classList.add("for_ul_of_nav")
-        liOfUlOfNavTag.forEach( (ele)=>{ ele.classList.add("for_li_of_ul_of_nav") } )
+        liOfUlOfNavTag.forEach((ele) => { ele.classList.add("for_li_of_ul_of_nav") })
 
 
-        document.querySelector("nav>button").innerHTML = "X"
+        document.querySelector("nav>button").innerHTML = '×'
         document.querySelector("nav>button").style.padding = "0 2vh"
-        document.querySelector("nav>button").style.backgroundColor = "red"
-        document.querySelector("nav>button").style.color = "#fff"
+        document.querySelector("nav>button").style.color = "red"
+        // document.querySelector("nav>button").style.color = "#fff"
     } else {
         // ulOfNavTag.style.height = "3px"
 
         ulOfNavTag.classList.remove("for_ul_of_nav")
-        liOfUlOfNavTag.forEach( (ele)=>{ ele.classList.remove("for_li_of_ul_of_nav") } )
+        liOfUlOfNavTag.forEach((ele) => { ele.classList.remove("for_li_of_ul_of_nav") })
 
 
-        document.querySelector("nav>button").innerHTML = "Menu"
+        document.querySelector("nav>button").innerHTML = '<i class="ri-menu-3-line"></i>'
         document.querySelector("nav>button").style.padding = "0 1vh"
-        document.querySelector("nav>button").style.backgroundColor = "cyan"
-        document.querySelector("nav>button").style.color = "#000"
+        document.querySelector("nav>button").style.color = "cyan"
+        // document.querySelector("nav>button").style.color = "#000"
     }
 
     menuBtnClicked = !menuBtnClicked
@@ -191,8 +191,14 @@ function scrollPageAndGetSetData() {
         document.getElementById("goto_top").style.display = "none"
     }
 
-    scrollShowDiv.style.width = Math.round(scroolPercentge) + "%"
-
+    if (window.innerWidth > 571) {
+        // // // For leptop ----------->>
+        scrollShowDiv.style.width = Math.round(scroolPercentge) + "%"
+    } else {
+        // // // For mobile ----------->>
+        scrollShowDiv.style.width = '100%'
+        scrollShowDiv.style.height = Math.round(scroolPercentge) + "%"
+    }
 
 }
 
@@ -412,7 +418,7 @@ document.querySelector("#project_show").addEventListener("mousemove", throttleFu
 
 // Fn to open Project link or Any link ------>
 
-function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png" , alertMSg = "this") {
+function openThisUrlNow(url = "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png", alertMSg = "this") {
 
     let askToUser = confirm(`Do you want to open ${alertMSg} Link  ??`)
 
@@ -550,8 +556,6 @@ async function contectFormSubmit() {
     }
 
 }
-
-
 
 
 
